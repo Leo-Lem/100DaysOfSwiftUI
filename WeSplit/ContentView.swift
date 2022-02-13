@@ -2,71 +2,57 @@
 //  ContentView.swift
 //  WeSplit
 //
-//  Created by Leopold Lemmermann on 27.07.21.
+//  Created by Leopold Lemmermann on 13.02.22.
 //
 
 import SwiftUI
+import MySwiftUI
 
 struct ContentView: View {
-    @State private var checkAmount = ""
-    @State private var numberOfPeople = ""
-    @State private var tipPercentage = 0
-    let tipPercentages = [10, 15, 20, 25, 0]
-    
-    var noTip: Bool {
-        if tipPercentage == 4 { return true }
-        return false
-    }
-    
-    var totalPerPerson: Double {
-        let peopleCount = Double(numberOfPeople) ?? 0 + 2
-        let tipSelection = Double(tipPercentages[tipPercentage])
-        let orderAmount = Double(checkAmount) ?? 0
-        
-        let tipValue = orderAmount * tipSelection/100
-        let grandTotal = orderAmount + tipValue
-        let amountPerPerson = grandTotal / peopleCount
-        
-        return amountPerPerson
-    }
-    
-    var total: Double {
-        let peopleCount = Double(numberOfPeople) ?? 0 + 2
-        
-        return totalPerPerson * peopleCount
-    }
-    
     var body: some View {
-        NavigationView {
-            Form {
-                Section {
-                    TextField("Amount", text: $checkAmount)
-                        .keyboardType(.decimalPad)
-                    TextField("Number of people", text: $numberOfPeople)
-                        .keyboardType(.numberPad)
-                }
+        Form {
+            Section {
+                TextField(
+                    "Amount",
+                    value: $amount,
+                    format: .currency(code: Locale.current.currencyCode ?? "USD"),
+                    prompt: Text("$0.00")
+                )
+                .keyboardType(.decimalPad)
+                .focused($amountFocused)
                 
-                Section(header: Text("How much tip do you want to leave?")) {
-                    Picker("Tip percentage", selection: $tipPercentage) {
-                        ForEach(0..<tipPercentages.count) {
-                            Text("\(self.tipPercentages[$0])%")
-                        }
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
+                ExtendedSegmentedPicker($people, options: Array(2...50)) {
+                    Text("\($0) people")
                 }
-                
-                Section(header: Text("Amount per person")) {
-                    Text("$ \(totalPerPerson, specifier: "%.2f")")
-                }
-                
-                Section(header: Text("Total")) {
-                    Text("$ \(total, specifier: "%.2f")").foregroundColor(noTip ? .red: .primary)
-                }
-                
             }
-            .navigationBarTitle("WeSplit!")
+            
+            Section("How much tip do you want to leave?") {
+                ExtendedSegmentedPicker($tip, options: Array(stride(from: 0.0, through: 0.8, by: 0.05)), startAt: 2) {
+                    Text($0, format: .percent)
+                }
+            }
+        }
+        .overlay(alignment: .bottom) {
+            TotalView(amount: self.amount, people: self.people, tip: self.tip)
+        }
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button("Done", action: { amountFocused = false })
+            }
+        }
+        .group { $0
+            .navigationTitle("WeSplit")
+            .embedInNavigation()
+            .navigationViewStyle(.stack)
         }
     }
+    
+    @State private var amount: Double? = nil
+    @State private var people = 2
+    @State private var tip = 0.2
+    
+    @FocusState private var amountFocused: Bool
 }
 
 struct ContentView_Previews: PreviewProvider {
