@@ -19,7 +19,7 @@ extension Game {
             let options = Country.random(flags)
             
             self.options = options
-            self.correct = options.randomElement() ?? .example
+            self.correct = options.randomElement() ?? .de
         }
     }
 }

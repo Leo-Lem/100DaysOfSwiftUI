@@ -16,16 +16,16 @@ enum Translation {
          settingsLabel,
          
          tapFlagLabel,
-         scoreLabel(score: Int),
-         roundsCountLabel(rounds: Int),
-         flagsCountLabel(flags: Int),
+         scoreLabel(_ score: Int),
+         roundsCountLabel(_ rounds: Int),
+         flagsCountLabel(_ flags: Int),
          
          okButton,
          newGameButton,
          saveAndNewGameButton,
          
          answerAlertTitle(correct: Bool),
-         answerAlertMessage(correct: Bool, score: Int? = nil, country: String? = nil),
+         answerAlertMessage(correct: Bool, score: Int, country: String),
          gameAlertTitle,
          gameAlertMessage(score: Int)
     
@@ -36,7 +36,7 @@ enum Translation {
         case .settingsLabel: return "settings-label"
             
         case .tapFlagLabel: return "tapFlag-label"
-        case .scoreLabel(let score): return "score-label \(score)"
+        case .scoreLabel(let score): return "score-label \(localizeWithUnit(score, label: .points))"
         case .roundsCountLabel(let rounds): return "roundsCount-label \(rounds)"
         case .flagsCountLabel(let flags): return "flagsCount-label \(flags)"
             
@@ -47,11 +47,11 @@ enum Translation {
         case .answerAlertTitle(let correct):
             return correct ? "answer-alert-title-correct" : "answer-alert-title-wrong"
         case .answerAlertMessage(let correct, let score, let country):
-            return correct ? "answer-alert-message-correct \(score!)" : "answer-alert-message-wrong \(country!)"
+            return correct ? "answer-alert-message-correct \(localizeWithUnit(score, label: .points))" : "answer-alert-message-wrong \(country)"
         case .gameAlertTitle:
             return "game-alert-title"
         case .gameAlertMessage(let score):
-            return "game-alert-message \(score)"
+            return "game-alert-message \(localizeWithUnit(score, label: .points))"
         }
     }
 }

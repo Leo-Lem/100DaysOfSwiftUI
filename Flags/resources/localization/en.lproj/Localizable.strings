@@ -10,7 +10,7 @@
 "settings-label" = "Settings";
     
 "tapFlag-label" = "Tap the flag of";
-"score-label %lld" = "Score: %lld";
+"score-label %@" = "%@";
 "roundsCount-label %lld" = "Number of rounds (%lld)";
 "flagsCount-label %lld" = "Number of flags (%lld)";
     
@@ -19,11 +19,10 @@
 "saveAndNewGame-button" = "Start New Game with these Settings";
     
 "game-alert-title" = "Game!";
-//TODO: add plural localization
-"game-alert-message %lld" = "You scored %lld!";
+"game-alert-message %@" = "You scored %@!";
 "answer-alert-title-correct" = "That's correct!";
 "answer-alert-title-wrong" = "That wrong...";
-"answer-alert-message-correct %lld" = "You scored %lld!";
+"answer-alert-message-correct %@" = "You scored %@ this round!";
 "answer-alert-message-wrong %@" = "It's the flag of %@.";
 
 //MARK: - countries
@@ -31,11 +30,11 @@
 "al" = "Albania";
 "dz" = "Algeria";
 "as" = "American Samoa";
-"ad" = "AndorrA";
+"ad" = "Andorra";
 "ao" = "Angola";
 "ai" = "Anguilla";
 "aq" = "Antarctica";
-"ag" = "Antigua and Barbuda";
+"ag" = "Antigua & Barbuda";
 "ar" = "Argentina";
 "am" = "Armenia";
 "aw" = "Aruba";
@@ -53,11 +52,11 @@
 "bm" = "Bermuda";
 "bt" = "Bhutan";
 "bo" = "Bolivia";
-"ba" = "Bosnia and Herzegovina";
+"ba" = "Bosnia & Herzegovina";
 "bw" = "Botswana";
 "bv" = "Bouvet Island";
 "br" = "Brazil";
-"bn" = "Brunei Darussalam";
+"bn" = "Brunei";
 "bg" = "Bulgaria";
 "bf" = "Burkina Faso";
 "bi" = "Burundi";
@@ -65,18 +64,17 @@
 "cm" = "Cameroon";
 "ca" = "Canada";
 "cv" = "Cape Verde";
-"ky" = "Cayman Islands";
-"cf" = "Central African Republic";
+"ky" = "the Cayman Islands";
+"cf" = "the Central African Republic";
 "td" = "Chad";
 "cl" = "Chile";
 "cn" = "China";
 "cx" = "Christmas Island";
-"cc" = "Cocos (Keeling) Islands";
 "co" = "Colombia";
 "km" = "Comoros";
 "cg" = "Congo";
-"cd" = "Democratic Republic of the Congo";
-"ck" = "Cook Islands";
+"cd" = "the DR Congo";
+"ck" = "the Cook Islands";
 "cr" = "Costa Rica";
 "ci" = "Cote D'Ivoire";
 "hr" = "Croatia";
@@ -94,8 +92,8 @@
 "er" = "Eritrea";
 "ee" = "Estonia";
 "et" = "Ethiopia";
-"fk" = "Falkland Islands";
-"fo" = "Faroe Islands";
+"fk" = "the Falkland Islands";
+"fo" = "the Faroe Islands";
 "fj" = "Fiji";
 "fi" = "Finland";
 "fr" = "France";
@@ -118,7 +116,7 @@
 "gw" = "Guinea-Bissau";
 "gy" = "Guyana";
 "ht" = "Haiti";
-"va" = "Holy See";
+"va" = "Vatican City";
 "hn" = "Honduras";
 "hk" = "Hong Kong";
 "hu" = "Hungary";
@@ -158,7 +156,7 @@
 "mv" = "Maldives";
 "ml" = "Mali";
 "mt" = "Malta";
-"mh" = "Marshall Islands";
+"mh" = "the Marshall Islands";
 "mq" = "Martinique";
 "mr" = "Mauritania";
 "mu" = "Mauritius";
@@ -192,7 +190,7 @@
 "pg" = "Papua New Guinea";
 "py" = "Paraguay";
 "pe" = "Peru";
-"ph" = "Philippines";
+"ph" = "the Philippines";
 "pn" = "Pitcairn";
 "pl" = "Poland";
 "pt" = "Portugal";
@@ -200,20 +198,19 @@
 "qa" = "Qatar";
 "re" = "Reunion";
 "ro" = "Romania";
-"ru" = "Russian Federation";
+"ru" = "Russia";
 "rw" = "Rwanda";
-"sh" = "Saint Helena";
-"kn" = "Saint Kitts and Nevis";
-"lc" = "Saint Lucia";
-"pm" = "Saint Pierre and Miquelon";
-"vc" = "Saint Vincent and the Grenadines";
+"sh" = "St. Helena";
+"kn" = "St. Kitts & Nevis";
+"lc" = "St. Lucia";
+"pm" = "St. Pierre & Miquelon";
+"vc" = "St. Vincent & the Grenadines";
 "ws" = "Samoa";
 "sm" = "San Marino";
-"st" = "Sao Tome and Principe";
+"st" = "Sao Tome & Principe";
 "sa" = "Saudi Arabia";
 "sn" = "Senegal";
-"cs" = "Serbia and Montenegro";
-"sc" = "Seychelles";
+"sc" = "the Seychelles";
 "sl" = "Sierra Leone";
 "sg" = "Singapore";
 "sk" = "Slovakia";
@@ -237,23 +234,23 @@
 "tg" = "Togo";
 "tk" = "Tokelau";
 "to" = "Tonga";
-"tt" = "Trinidad and Tobago";
+"tt" = "Trinidad & Tobago";
 "tn" = "Tunisia";
 "tr" = "Turkey";
 "tm" = "Turkmenistan";
-"tc" = "Turks and Caicos Islands";
+"tc" = "Turks & Caicos Islands";
 "tv" = "Tuvalu";
 "ug" = "Uganda";
 "ua" = "Ukraine";
-"ae" = "United Arab Emirates";
-"gb" = "United Kingdom";
-"us" = "United States";
+"ae" = "the United Arab Emirates";
+"gb" = "the United Kingdom";
+"us" = "the United States";
 "uy" = "Uruguay";
 "uz" = "Uzbekistan";
 "vu" = "Vanuatu";
 "ve" = "Venezuela";
 "vn" = "Viet Nam";
-"wf" = "Wallis and Futuna";
+"wf" = "Wallis & Futuna";
 "eh" = "Western Sahara";
 "ye" = "Yemen";
 "zm" = "Zambia";

@@ -14,6 +14,7 @@ extension FlagsView {
         var body: some View {
             Image(country.rawValue)
                 .resizable()
+                .interpolation(.high)
                 .brightness(-0.1)
                 .clipShape(Capsule())
                 .shadow(radius: 10)

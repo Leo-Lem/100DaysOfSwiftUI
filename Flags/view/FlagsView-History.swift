@@ -14,31 +14,37 @@ extension FlagsView {
         
         var body: some View {
             NavigationView {
-                List(games) { game in
-                    VStack {
-                        HStack {
-                            Text(~.scoreLabel(score: game.score), font: .headline)
-                            Spacer()
-                            Text(game.timestamp.formatted(), font: .caption)
-                        }
-                        
-                        ScrollView(.horizontal) {
+                ScrollView {
+                    ForEach(games) { game in
+                        VStack {
                             HStack {
-                                ForEach(game.rounds, id: \.self) { round in
-                                    VStack {
-                                        ForEach(round.options, id: \.self) { country in
-                                            FlagImage(country: country)
-                                                .frame(maxHeight: 25)
-                                                .overlay(round.correct(country) ? .green.opacity(0.8) : .gray.opacity(0.8))
-                                                .clipShape(Capsule())
+                                Text(~.scoreLabel(game.score), font: .headline)
+                                Spacer()
+                                Text(game.timestamp.formatted(), font: .caption)
+                            }
+                            
+                            ScrollView(.horizontal) {
+                                HStack {
+                                    ForEach(game.rounds, id: \.self) { round in
+                                        VStack {
+                                            ForEach(round.options, id: \.self) { country in
+                                                FlagImage(country: country)
+                                                    .frame(maxHeight: 25)
+                                                    .overlay(round.correct(country) ? .green.opacity(0.8) : .gray.opacity(0.8))
+                                                    .clipShape(Capsule())
+                                                    .contextMenu { Text("\(country.localized)") }
+                                            }
+                                            
+                                            Text(round.score.formatted(), font: .headline)
                                         }
-                                        Text(round.score.formatted(), font: .headline)
                                     }
                                 }
                             }
                         }
+                        
+                        Divider()
                     }
-                    .padding(.vertical)
+                    .padding()
                 }
                 .navigationTitle(~.historyLabel)
             }
@@ -49,6 +55,6 @@ extension FlagsView {
 //MARK: - Previews
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        FlagsView.History(games: [.example, .example, .example])
+        FlagsView.History(games: [.example, .example])
     }
 }

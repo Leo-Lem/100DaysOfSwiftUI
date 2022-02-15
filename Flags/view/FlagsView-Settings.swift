@@ -15,7 +15,7 @@ extension FlagsView {
         var body: some View {
             NavigationView {
                 Form {
-                    Section(~.roundsCountLabel(rounds: settings.rounds)) {
+                    Section(~.roundsCountLabel(settings.rounds)) {
                         Slider(
                             value: Binding(
                                 get: { Double(settings.rounds) },
@@ -27,7 +27,7 @@ extension FlagsView {
                         ) {}
                     }
                     
-                    Section(~.flagsCountLabel(flags: settings.flags)) {
+                    Section(~.flagsCountLabel(settings.flags)) {
                         Slider(
                             value: Binding(
                                 get: { Double(settings.flags) },
@@ -35,7 +35,7 @@ extension FlagsView {
                             ),
                             in: 2...9, step: 1.0,
                             minimumValueLabel: Text("2"),
-                            maximumValueLabel: Text("15")
+                            maximumValueLabel: Text("9")
                         ) {}
                     }
                 }

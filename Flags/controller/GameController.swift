@@ -11,12 +11,12 @@ import MyStorage
 
 class AppState: ObservableObject {
     
-    @Published var game = Game(settings: .example)
+    @Published var game = Game(settings: Settings(rounds: 5, flags: 3))
     var games = [Game]() {
         willSet { objectWillChange.send() }
         didSet { games.save() }
     }
-    var settings: Settings = .example {
+    var settings: Settings = Settings(rounds: 5, flags: 3) {
         willSet { objectWillChange.send() }
         didSet { settings.save() }
     }

@@ -19,6 +19,7 @@ extension FlagsView {
                     Text(round.correct.localized, font: .largeTitle.weight(.semibold))
                 }
                 .minimumScaleFactor(0.5)
+                .lineLimit(0)
                 
                 LazyVGrid(columns: cols) {
                     ForEach(round.options, id: \.self) { country in
@@ -32,8 +33,9 @@ extension FlagsView {
                                     .overlay(correct ? .green.opacity(0.8) : .gray.opacity(0.5))
                                     .clipShape(Capsule())
                                     .disabled(true)
+                                    .contextMenu { Text("\(country.localized)") }
                             }
-                            .alert(~.answerAlertTitle(correct: round.correct(answer ?? .example)), item: $answer) { answer in
+                            .alert(~.answerAlertTitle(correct: round.correct(answer ?? .de)), item: $answer) { answer in
                                 Button(~.okButton) {
                                     if round.correct(answer) { newRound() }
                                 }

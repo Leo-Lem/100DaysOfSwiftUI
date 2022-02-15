@@ -32,7 +32,7 @@ struct FlagsView: View {
             Spacer()
             Spacer()
             
-            Text(~.scoreLabel(score: game.score), font: .title.bold(), color: .white)
+            Text(~.scoreLabel(game.score), font: .title.bold(), color: .white)
                 .alert(~.gameAlertTitle, isPresented: finished) {
                     Button(~.newGameButton) {}
                 } message: {
