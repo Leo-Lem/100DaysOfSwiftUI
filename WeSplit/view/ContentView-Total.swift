@@ -22,7 +22,6 @@ extension ContentView {
                 }
             }
             .padding(.vertical, 10)
-            .background(.bar)
         }
         
         private var total: (amount: Double, tip: Double, grand: Double) {

@@ -14,7 +14,7 @@ struct ContentView: View {
             Section {
                 TextField(
                     "Amount",
-                    value: $amount,
+                    value: $total,
                     format: .currency(code: Locale.current.currencyCode ?? "USD"),
                     prompt: Text("$0.00")
                 )
@@ -31,14 +31,31 @@ struct ContentView: View {
                     Text($0, format: .percent)
                 }
             }
+            
+            Section {
+                Button {
+                    guard let total = total else { return }
+                    state.saveEntry(total: total, people: people, tip: tip)
+                } label: {
+                    Label("Pay", systemImage: "signature")
+                }
+                .frame(maxWidth: .infinity)
+            }
         }
         .overlay(alignment: .bottom) {
-            Total(amount: amount, people: people, tip: tip)
+            Total(amount: total, people: people, tip: tip)
+                .background(.bar)
         }
         .toolbar {
             ToolbarItemGroup(placement: .keyboard) {
                 Spacer()
                 Button("Done", action: { amountFocused = false })
+            }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink {
+                    History(entries: state.history)
+                } label: { Label("History", systemImage: "list.bullet.circle")}
             }
         }
         .group { $0
@@ -48,11 +65,13 @@ struct ContentView: View {
         }
     }
     
-    @State private var amount: Double? = nil
+    @State private var total: Double? = nil
     @State private var people = 2
     @State private var tip = 0.2
     
     @FocusState private var amountFocused: Bool
+    
+    @StateObject private var state = AppState()
 }
 
 //MARK: - Previews
