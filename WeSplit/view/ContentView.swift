@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  WeSplit
 //
-//  Created by Leopold Lemmermann on 13.02.22.
+//  Created by Leopold Lemmermann on 16.02.22.
 //
 
 import SwiftUI
@@ -33,7 +33,7 @@ struct ContentView: View {
             }
         }
         .overlay(alignment: .bottom) {
-            TotalView(amount: self.amount, people: self.people, tip: self.tip)
+            Total(amount: amount, people: people, tip: tip)
         }
         .toolbar {
             ToolbarItemGroup(placement: .keyboard) {
@@ -55,6 +55,7 @@ struct ContentView: View {
     @FocusState private var amountFocused: Bool
 }
 
+//MARK: - Previews
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
