@@ -12,12 +12,12 @@ struct ContentView: View {
     var body: some View {
         Form {
             Section("Input") {
-                TextField("Value", value: $value, format: .number)
+                TextField("0.0", value: $value, format: .number)
                     .keyboardType(.decimalPad)
                     .frame(maxWidth: .infinity)
                     .multilineTextAlignment(.center)
                 
-                ExtendedSegmentedPicker($unit.input, options: type.units, segments: 7) { unit in
+                ExtendedSegmentedPicker($unit.input, options: type.units, segments: 6) { unit in
                     Text(unit.symbol)
                 } menuLabel: {
                     Text($0.formatted(.long))
@@ -25,7 +25,7 @@ struct ContentView: View {
             }
             
             Section("Output") {
-                ExtendedSegmentedPicker($unit.output, options: type.units, segments: 7) {
+                ExtendedSegmentedPicker($unit.output, options: type.units, segments: 6) {
                     Text($0.symbol)
                 } menuLabel: {
                     Text($0.formatted(.long))
@@ -34,7 +34,7 @@ struct ContentView: View {
                 GeometryReader { geo in
                     HStack(alignment: .top) {
                         VStack {
-                            Text(measurement.input.formatted())
+                            Text((measurement.input.value * 100).rounded() / 100, format: .number)
                             Text(measurement.input.unit.formatted(.long), font: .caption2.bold(), color: .secondary)
                         }
                         .frame(width: geo.size.width / 2.5)
@@ -44,7 +44,7 @@ struct ContentView: View {
                         Spacer()
                         
                         VStack {
-                            Text(measurement.output.formatted())
+                            Text((measurement.output.value * 100).rounded() / 100, format: .number)
                             Text(measurement.output.unit.formatted(.long), font: .caption2.bold(), color: .secondary)
                         }
                         .frame(width: geo.size.width / 2.5)
@@ -67,14 +67,14 @@ struct ContentView: View {
                 .onChange(of: type) { newValue in self.unit = newValue.defaults }
             }
         }
-        .navigationTitle("UnitConversion")
+        .navigationTitle("Units")
         .embedInNavigation()
         .navigationViewStyle(.stack)
     }
     
-    @State private var type: ConversionUnit = .temperature
+    @State private var type: ConversionUnit = .length
     @State private var value: Double = 1
-    @State private var unit: (input: Dimension, output: Dimension) = ConversionUnit.temperature.defaults
+    @State private var unit: (input: Dimension, output: Dimension) = ConversionUnit.length.defaults
     
     private var measurement: (input: Measurement<Dimension>, output: Measurement<Dimension>) {
         let input = Measurement(value: value, unit: unit.input)
@@ -93,43 +93,70 @@ extension Unit {
 }
 
 extension ContentView {
+    enum Category: String, CaseIterable {
+        case dimension = "Physical Dimension",
+             mass = "Mass, Weight and Force",
+             time = "Time and Motion",
+             energy = "Energy, Heat & Light"
+    }
+    
     enum ConversionUnit: String, CaseIterable {
-        case temperature = "Temperature",
-             length = "Length",
-             time = "Time",
-             volume = "Volume"
+        case length = "Length",
+             area = "Area",
+             volume = "Volume",
+             angle = "Angle",
+             mass = "Weight",
+             pressure = "Pressure",
+             duration = "Time",
+             speed = "Speed",
+             energy = "Energy",
+             power = "Power",
+             temperature = "Temperature"
         
         var defaults: (input: Dimension, output: Dimension) {
             switch self {
-            case .temperature:
-                let defaults: (UnitTemperature, UnitTemperature) = (.celsius, .fahrenheit)
-                return defaults
-            case .length:
-                let defaults: (UnitLength, UnitLength) = (.meters, .feet)
-                return defaults
-            case .time:
-                let defaults: (UnitDuration, UnitDuration) = (.seconds, .nanoseconds)
-                return defaults
-            case .volume:
-                let defaults: (UnitVolume, UnitVolume) = (.liters, .gallons)
-                return defaults
+            case .length: return (UnitLength.meters, UnitLength.feet)
+            case .area: return (UnitArea.squareMeters, UnitArea.squareFeet)
+            case .volume: return (UnitVolume.liters, UnitVolume.gallons)
+            case .angle: return (UnitAngle.degrees, UnitAngle.radians)
+            case .mass: return (UnitMass.grams, UnitMass.ounces)
+            case .pressure: return (UnitPressure.bars, UnitPressure.kilopascals)
+            case .duration: return (UnitDuration.seconds, UnitDuration.nanoseconds)
+            case .speed: return (UnitSpeed.metersPerSecond, UnitSpeed.kilometersPerHour)
+            case .energy: return (UnitEnergy.kilocalories, UnitEnergy.kilojoules)
+            case .power: return (UnitPower.kilowatts, UnitPower.horsepower)
+            case .temperature: return (UnitTemperature.celsius, UnitTemperature.fahrenheit)
             }
         }
         
         var units: [Dimension] {
             switch self {
-            case .temperature:
-                let array: [UnitTemperature] = [.celsius, .fahrenheit, .kelvin]
-                return array
             case .length:
-                let array: [UnitLength] = [.meters, .kilometers, .inches, .feet, .miles, .yards, .parsecs, .decimeters, .centimeters, .millimeters, .micrometers, .nanometers, .picometers,  .scandinavianMiles, .lightyears, .nauticalMiles, .fathoms, .furlongs, .astronomicalUnits]
-                return array
-            case .time:
-                let array: [UnitDuration] = [.hours, .minutes, .seconds, .milliseconds, .microseconds, .nanoseconds]
-                return array
+                return [UnitLength.meters] + [.feet, .centimeters, .inches, .kilometers, .miles,
+                                                .decimeters,  .millimeters, .micrometers, .nanometers, .picometers, .yards, .scandinavianMiles, .nauticalMiles, .fathoms, .furlongs, .lightyears, .parsecs, .astronomicalUnits]
+            case .area:
+                return [UnitArea.squareMeters] + [.squareFeet, .squareCentimeters, .squareInches, .squareKilometers, .squareMiles,
+                                                    .squareMillimeters, .acres, .hectares, .squareMicrometers, .squareNanometers, .squareYards]
             case .volume:
-                let array: [UnitVolume] = [.liters, .milliliters, .cubicMeters, .cups, .pints, .quarts, .gallons, .megaliters, .deciliters, .centiliters, .cubicKilometers, .cubicMeters, .cubicDecimeters, .cubicMillimeters, .cubicInches, .cubicFeet, .cubicYards, .cubicMiles, .acreFeet, .bushels, .teaspoons, .tablespoons, .fluidOunces, .imperialTeaspoons, .imperialTablespoons, .imperialFluidOunces, .imperialPints, .imperialQuarts, .imperialGallons, .metricCups]
-                return array
+                return [UnitVolume.liters] + [.milliliters, .cubicMeters, .cups, .pints,
+                                                .quarts, .gallons, .megaliters, .deciliters, .centiliters, .cubicKilometers, .cubicMeters, .cubicDecimeters, .cubicMillimeters, .cubicInches, .cubicFeet, .cubicYards, .cubicMiles, .acreFeet, .bushels, .teaspoons, .tablespoons, .fluidOunces, .imperialTeaspoons, .imperialTablespoons, .imperialFluidOunces, .imperialPints, .imperialQuarts, .imperialGallons, .metricCups]
+            case .angle:
+                return [UnitAngle.degrees] + [.radians, .gradians, .revolutions, .arcMinutes, .arcSeconds]
+            case .mass:
+                return [UnitMass.kilograms] + [.pounds, .grams, .stones, .metricTons, .ounces, .decigrams, .centigrams, .milligrams, .micrograms, .nanograms, .picograms, .shortTons, .carats, .ouncesTroy, .slugs]
+            case .pressure:
+                return [UnitPressure.newtonsPerMetersSquared] + [.bars, .kilopascals, .poundsForcePerSquareInch, .inchesOfMercury, .millibars,
+                                                                 .millimetersOfMercury, .gigapascals, .megapascals,  .hectopascals]
+            case .duration:
+                return [UnitDuration.seconds] + [.hours, .minutes, .milliseconds, .nanoseconds, .picoseconds, .microseconds]
+            case .speed:
+                return [UnitSpeed.metersPerSecond] + [.kilometersPerHour, .milesPerHour, .knots]
+            case .energy:
+                return [UnitEnergy.joules] + [.calories, .kilojoules, .kilocalories, .kilowattHours]
+            case .power:
+                return [UnitPower.horsepower] + [.kilowatts, .milliwatts, .watts]
+            case .temperature:
+                return [UnitTemperature.celsius] + [.fahrenheit, .kelvin]
             }
         }
     }
