@@ -3,13 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6E21C9AE26B5C3E100AAC439 /* RockPaperScissorsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21C9AD26B5C3E100AAC439 /* RockPaperScissorsApp.swift */; };
 		6E21C9B026B5C3E100AAC439 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21C9AF26B5C3E100AAC439 /* ContentView.swift */; };
 		6E21C9B226B5C3E500AAC439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E21C9B126B5C3E500AAC439 /* Assets.xcassets */; };
+		6E70A38027BE777A0039CAEE /* Moves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E70A37F27BE777A0039CAEE /* Moves.swift */; };
+		6E70A38227BE7A140039CAEE /* Outcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E70A38127BE7A140039CAEE /* Outcome.swift */; };
+		6E70A38727BE7AFF0039CAEE /* MyPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 6E70A38627BE7AFF0039CAEE /* MyPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +20,9 @@
 		6E21C9AD26B5C3E100AAC439 /* RockPaperScissorsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockPaperScissorsApp.swift; sourceTree = "<group>"; };
 		6E21C9AF26B5C3E100AAC439 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6E21C9B126B5C3E500AAC439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E70A37F27BE777A0039CAEE /* Moves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moves.swift; sourceTree = "<group>"; };
+		6E70A38127BE7A140039CAEE /* Outcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outcome.swift; sourceTree = "<group>"; };
+		6E70A38427BE7AF80039CAEE /* MyPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MyPackage; path = ../../../MyPackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E70A38727BE7AFF0039CAEE /* MyPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,8 +40,10 @@
 		6E21C9A126B5C3E100AAC439 = {
 			isa = PBXGroup;
 			children = (
+				6E70A38327BE7AF80039CAEE /* Packages */,
 				6E21C9AC26B5C3E100AAC439 /* RockPaperScissors */,
 				6E21C9AB26B5C3E100AAC439 /* Products */,
+				6E70A38527BE7AFF0039CAEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,10 +59,59 @@
 			isa = PBXGroup;
 			children = (
 				6E21C9AD26B5C3E100AAC439 /* RockPaperScissorsApp.swift */,
-				6E21C9AF26B5C3E100AAC439 /* ContentView.swift */,
-				6E21C9B126B5C3E500AAC439 /* Assets.xcassets */,
+				6E70A37E27BE775B0039CAEE /* model */,
+				6E70A37D27BE77560039CAEE /* controller */,
+				6E70A37C27BE77520039CAEE /* view */,
+				6E70A37B27BE774D0039CAEE /* resources */,
 			);
 			path = RockPaperScissors;
+			sourceTree = "<group>";
+		};
+		6E70A37B27BE774D0039CAEE /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				6E21C9B126B5C3E500AAC439 /* Assets.xcassets */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		6E70A37C27BE77520039CAEE /* view */ = {
+			isa = PBXGroup;
+			children = (
+				6E21C9AF26B5C3E100AAC439 /* ContentView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		6E70A37D27BE77560039CAEE /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		6E70A37E27BE775B0039CAEE /* model */ = {
+			isa = PBXGroup;
+			children = (
+				6E70A37F27BE777A0039CAEE /* Moves.swift */,
+				6E70A38127BE7A140039CAEE /* Outcome.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		6E70A38327BE7AF80039CAEE /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				6E70A38427BE7AF80039CAEE /* MyPackage */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		6E70A38527BE7AFF0039CAEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,6 +130,9 @@
 			dependencies = (
 			);
 			name = RockPaperScissors;
+			packageProductDependencies = (
+				6E70A38627BE7AFF0039CAEE /* MyPackage */,
+			);
 			productName = RockPaperScissors;
 			productReference = 6E21C9AA26B5C3E100AAC439 /* RockPaperScissors.app */;
 			productType = "com.apple.product-type.application";
@@ -126,6 +187,8 @@
 			files = (
 				6E21C9B026B5C3E100AAC439 /* ContentView.swift in Sources */,
 				6E21C9AE26B5C3E100AAC439 /* RockPaperScissorsApp.swift in Sources */,
+				6E70A38027BE777A0039CAEE /* Moves.swift in Sources */,
+				6E70A38227BE7A140039CAEE /* Outcome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +321,9 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4UUEFBYP76;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = RockPaperScissors/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -282,7 +347,9 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4UUEFBYP76;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = RockPaperScissors/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -318,6 +385,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6E70A38627BE7AFF0039CAEE /* MyPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MyPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6E21C9A226B5C3E100AAC439 /* Project object */;
 }
