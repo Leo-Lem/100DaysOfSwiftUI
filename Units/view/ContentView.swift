@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MySwiftUI
+import MyOthers
 
 struct ContentView: View {
     var body: some View {
@@ -14,6 +15,7 @@ struct ContentView: View {
             Section("Input") {
                 TextField("0.0", value: $value, format: .number)
                     .keyboardType(.decimalPad)
+                    .focused($focused)
                     .frame(maxWidth: .infinity)
                     .multilineTextAlignment(.center)
                 
@@ -56,6 +58,11 @@ struct ContentView: View {
             }
         }
         .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button("Done", action: { focused = false })
+            }
+            
             ToolbarItem(placement: .navigationBarTrailing) {
                 Menu(type.rawValue) {
                     Picker("Unit", selection: $type) {
@@ -82,14 +89,8 @@ struct ContentView: View {
         
         return (input, output)
     }
-}
-
-extension Unit {
-    func formatted(_ style: Formatter.UnitStyle) -> String {
-        let formatter = MeasurementFormatter()
-        formatter.unitStyle = style
-        return formatter.string(from: self)
-    }
+    
+    @FocusState private var focused: Bool
 }
 
 extension ContentView {
@@ -138,8 +139,8 @@ extension ContentView {
                 return [UnitArea.squareMeters] + [.squareFeet, .squareCentimeters, .squareInches, .squareKilometers, .squareMiles,
                                                     .squareMillimeters, .acres, .hectares, .squareMicrometers, .squareNanometers, .squareYards]
             case .volume:
-                return [UnitVolume.liters] + [.milliliters, .cubicMeters, .cups, .pints,
-                                                .quarts, .gallons, .megaliters, .deciliters, .centiliters, .cubicKilometers, .cubicMeters, .cubicDecimeters, .cubicMillimeters, .cubicInches, .cubicFeet, .cubicYards, .cubicMiles, .acreFeet, .bushels, .teaspoons, .tablespoons, .fluidOunces, .imperialTeaspoons, .imperialTablespoons, .imperialFluidOunces, .imperialPints, .imperialQuarts, .imperialGallons, .metricCups]
+                return [UnitVolume.liters] + [.milliliters, .gallons, .cubicMeters, .cups, .fluidOunces,
+                                                .pints, .quarts, .megaliters, .deciliters, .centiliters, .cubicKilometers, .cubicMeters, .cubicDecimeters, .cubicMillimeters, .cubicInches, .cubicFeet, .cubicYards, .cubicMiles, .acreFeet, .bushels, .teaspoons, .tablespoons, .imperialTeaspoons, .imperialTablespoons, .imperialFluidOunces, .imperialPints, .imperialQuarts, .imperialGallons, .metricCups]
             case .angle:
                 return [UnitAngle.degrees] + [.radians, .gradians, .revolutions, .arcMinutes, .arcSeconds]
             case .mass:
