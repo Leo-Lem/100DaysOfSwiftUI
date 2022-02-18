@@ -6,134 +6,110 @@
 //
 
 import SwiftUI
+import MySwiftUI
+import MyOthers
 
 struct ContentView: View {
-    @State private var usedWords = [String]()
-    @State private var rootWord = ""
-    @State private var newWord = ""
-    @State private var score = 0
-    
-    //error messages
-    @State private var errorTitle = ""
-    @State private var errorMessage = ""
-    @State private var showingError = false
-    
     var body: some View {
-        NavigationView {
-            VStack {
-                TextField("Enter your word", text: $newWord, onCommit: addNewWord)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                    .autocapitalization(.none)
-                
-                List(usedWords, id: \.self) { word in
-                    HStack {
-                        Image(systemName: "\(word.count).circle")
-                        Text(word)
-                    }
-                    .accessibilityElement()
+        VStack {
+            TextField("Enter your word", text: $newWord, onCommit: tryWord)
+                .textFieldStyle(.roundedBorder)
+                .padding()
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
+                .alert(
+                    $error,
+                    title: { $0.error(newWord).title },
+                    actions: { _ in Button("OK", action: { newWord.removeAll() }) },
+                    message: { Text($0.error(newWord).message) }
+                )
+            
+            List(usedWords.reversed(), id: \.self) { word in
+                Label(word, systemImage: "\(word.count).circle")
                     .accessibilityLabel("\(word), \(word.count) letters")
-                }
-                
-                Text("Your score is \(score)")
-                    .padding()
-                    .font(.headline)
+                    .foregroundColor(.primary)
             }
-            .onAppear(perform: startGame)
+        }
+        .toolbar {
+            ToolbarItem(placement: .bottomBar) {
+                Text("Your score is \(score).", font: .headline)
+            }
+            
+            ToolbarItem(placement: .automatic) {
+                Button("Start New Game", action: start)
+            }
+        }
+        .group { $0
             .navigationTitle(rootWord)
-            .navigationBarTitleDisplayMode(.large)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: startGame) { Text("New Game") }
-                }
-            }
-            .alert(isPresented: $showingError) {
-                Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
-            }
+            .embedInNavigation()
+            .navigationViewStyle(.stack)
         }
-        .navigationViewStyle(.stack)
     }
     
-    private func startGame() {
-        usedWords = [String](); score = 0
+    @State private var error: ErrorKind? = nil
+    @State private var newWord = ""
+    @State private var rootWord = words.randomElement() ?? "silkworm"
+    @State private var usedWords = [String]()
+    
+    private var score: Int { usedWords.reduce(0, { $0 + $1.count }) }
+}
+
+extension ContentView {
+    static let words: [String] = {
+        guard
+            let url = Bundle.main.url(forResource: "start", withExtension: "txt"),
+            let raw = try? String(contentsOf: url)
+        else { fatalError("Could not load start.txt from bundle.") }
         
-        if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
-            if let startWords = try? String(contentsOf: startWordsURL) {
-                let allWords = startWords.components(separatedBy: "\n")
-                rootWord = allWords.randomElement() ?? "silkworm"
-                return
-            }
-        }
-        fatalError("Could not load start.txt from bundle.")
+        return raw.components(separatedBy: "\n")
+    }()
+    
+    private func start() {
+        self.usedWords.removeAll()
+        self.rootWord = Self.words.randomElement() ?? "silkworm"
     }
     
-    private func addNewWord() {
+    private func tryWord() {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         
-        guard answer.count > 0 else {
-            return
+        switch answer {
+        case _ where answer.count < 1: break
+        case _ where answer.count < 3: self.error = .length
+        case rootWord: self.error = .root
+        case _ where usedWords.contains(answer): self.error = .used
+        case _ where !rootWord.unorderedContains(answer): self.error = .illegal
+        case _ where !isReal(answer): self.error = .unknown
+        default:
+            self.usedWords.append(newWord)
+            self.newWord = ""
         }
-        
-        guard answer != rootWord else {
-            wordError(title: "Word is start word", message: "Obviously you can't just use the original word")
-            return
-        }
-        
-        guard answer.count > 2 else {
-            wordError(title: "Word is too short", message: "Only words with more than 2 letters allowed")
-            return
-        }
-        
-        guard isOriginal(answer) else {
-            wordError(title: "Word used already", message: "Be more original...")
-            return
-        }
-        
-        guard isPossible(answer) else {
-            wordError(title: "Word not recognized", message: "You can't just make them up, you know!")
-            return
-        }
-        
-        guard isReal(answer) else {
-            wordError(title: "Word not possible", message: "That isn't an english word!")
-            return
-        }
-        
-        usedWords.insert(answer, at: 0)
-        score += answer.count
-        newWord = ""
-    }
-    
-    private func isOriginal(_ word: String) -> Bool { !usedWords.contains(word) }
-    
-    private func isPossible(_ word: String) -> Bool {
-        var tempWord = rootWord
-        
-        for letter in word {
-            if let pos = tempWord.firstIndex(of: letter) {
-                tempWord.remove(at: pos)
-            } else {
-                return false
-            }
-        }
-        return true
     }
     
     private func isReal(_ word: String) -> Bool {
-        let checker = UITextChecker()
-        let range = NSRange(location: 0, length: word.utf16.count)
-        let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
+        let range = NSRange(location: 0, length: word.utf16.count),
+            misspelledRange = UITextChecker().rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
         
         return misspelledRange.location == NSNotFound
     }
-    
-    private func wordError(title: String, message: String) {
-        errorTitle = title
-        errorMessage = message
-        showingError = true
+}
+
+extension ContentView {
+    enum ErrorKind {
+        case length, root, used, illegal, unknown
+        
+        func error(_ word: String) -> (title: String, message: String) {
+            switch self {
+            case .root: return ("'\(word)' is start word", "Obviously you can't just use the original word")
+            case .length: return ("'\(word)' is too short", "Only words with more than 2 letters allowed")
+            case .used: return ("'\(word)' was used already", "Be more original...")
+            case .illegal: return ("'\(word)' not recognized", "You can't just make them up, you know!")
+            case .unknown: return ("'\(word)' not possible", "That isn't an english word!")
+            }
+        }
     }
 }
 
+//MARK: - Previews
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
