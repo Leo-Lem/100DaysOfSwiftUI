@@ -31,7 +31,7 @@
 			<key>zero</key>
 			<string>keine Punkte</string>
 			<key>one</key>
-			<string>%d Punkt</string>
+			<string>einen Punkt</string>
 			<key>other</key>
 			<string>%d Punkte</string>
 		</dict>

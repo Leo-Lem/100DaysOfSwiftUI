@@ -61,5 +61,10 @@ prefix func ~ (translation: Translation) -> LocalizedStringKey { translation.loc
 
 //MARK: - localized country names
 extension Country {
-    var localized: String { self.rawValue~ }
+    var localized: String {
+        switch Locale.current.languageCode {
+        case "de": return name.de
+        default: return name.en
+        }
+    }
 }

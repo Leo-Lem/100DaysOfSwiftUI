@@ -12,7 +12,7 @@ extension FlagsView {
         let country: Country
         
         var body: some View {
-            Image(country.rawValue)
+            Image(country.id)
                 .resizable()
                 .interpolation(.high)
                 .brightness(-0.1)
@@ -20,7 +20,6 @@ extension FlagsView {
                 .shadow(radius: 10)
                 .aspectRatio(1.8/1, contentMode: .fit)
                 .frame(maxWidth: 200)
-                .accessibilityLabel(country.accessibilityDescription)
         }
     }
 }

@@ -8,30 +8,17 @@
 import Foundation
 
 extension Game {
-    static let example = `dynamic`
-    static var dynamic: Game {
+    static let example: Game = {
         var game = Game(settings: .example)
         for _ in 0..<Settings.example.rounds {
             game.round.options.forEach { country in game.try(country) }
             game.newRound()
         }
         return game
-    }
+    }()
 }
 
-extension Game.Round {
-    static let example = Game.Round(3)
-    static var dynamic: Self { Self(Int.random(in: 2...9)) }
-}
-
-extension Settings {
-    static let example = Settings(rounds: 5, flags: 3)
-    static var dynamic: Self { Settings(rounds: Int.random(in: 2...15), flags: Int.random(in: 2...9)) }
-}
-
-extension Country {
-    static let example = Country.de
-    static var dynamic: Self { Country.allCases.randomElement() ?? .in }
-}
-
+extension Game.Round { static let example = Game.Round([.example, .init(id: "fr", name: ("France", "Frankreich"))]) }
+extension Settings { static let example = Settings(countries: [.example, .init(id: "fr", name: ("France", "Frankreich"))], rounds: 5, flags: 3) }
+extension Country { static let example = Country(id: "de", name: ("Germany", "Deutschland")) }
 typealias FlagImage = FlagsView.FlagImage

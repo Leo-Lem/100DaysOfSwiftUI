@@ -15,11 +15,9 @@ extension Game {
         
         var score: Int { tried(correct) ? options.count - tries.count : 0 }
         
-        init(_ flags: Int) {
-            let options = Country.random(flags)
-            
+        init(_ options: [Country]) {
             self.options = options
-            self.correct = options.randomElement() ?? .de
+            self.correct = options.randomElement()!
         }
     }
 }

@@ -15,7 +15,7 @@ struct Game: Identifiable, Codable {
     
     init(settings: Settings) {
         self.settings = settings
-        self.round = Round(settings.flags)
+        self.round = Round(settings.random)
     }
 }
 
@@ -28,7 +28,7 @@ extension Game {
     mutating func newRound() {
         rounds.append(round)
         guard active else { return }
-        self.round = Round(settings.flags)
+        self.round = Round(settings.random)
     }
     
     var score: Int { rounds.reduce(0) { $0 + $1.score } }

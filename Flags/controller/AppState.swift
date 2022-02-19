@@ -11,20 +11,21 @@ import MyStorage
 
 class AppState: ObservableObject {
     
-    @Published var game = Game(settings: Settings(rounds: 5, flags: 3))
-    var games = [Game]() {
+    let countries: [Country] = .load()
+    
+    var game: Game = .load() {
         willSet { objectWillChange.send() }
-        didSet { games.save() }
+        didSet { game.save() }
     }
-    var settings: Settings = Settings(rounds: 5, flags: 3) {
+    
+    var settings: Settings = .load() {
         willSet { objectWillChange.send() }
         didSet { settings.save() }
     }
     
-    init() {
-        games.load()
-        settings.load()
-        self.game = Game(settings: settings)
+    var games: [Game] = .load() {
+        willSet { objectWillChange.send() }
+        didSet { games.save() }
     }
     
 }
@@ -41,31 +42,54 @@ extension AppState {
 }
 
 //MARK: - persistence methods
-fileprivate extension Array where Element == Game {
+fileprivate extension Game {
     
-    private var file: URL { FileManager.documentsDirectory.appendingPathComponent("games.json") }
-    
-    func save() {
-        do {
-            let data = try JSONEncoder().encode(self)
-            try data.write(to: file)
-        } catch { print("saving games failes: \(error)") }
-    }
-    
-    mutating func load() {
-        do {
-            let data = try Data(contentsOf: file),
-                decoded: [Game] = try JSONDecoder().decode(data)
-            self = decoded
-        } catch { print("loading games failes: \(error)") }
-    }
+    private static let key = "game"
+    func save() { UserDefaults.standard.setObject(self, forKey: Self.key) }
+    static func load() -> Self { UserDefaults.standard.getObject(forKey: key) ?? Game(settings: .load()) }
     
 }
 
 fileprivate extension Settings {
     
-    private var key: String { "settings" }
-    func save() { UserDefaults.standard.setObject(self, forKey: key) }
-    mutating func load() { self = UserDefaults.standard.getObject(forKey: key) ?? Settings(rounds: 5, flags: 3) }
+    private static let key = "settings"
+    func save() { UserDefaults.standard.setObject(self, forKey: Self.key) }
+    static func load() -> Self { UserDefaults.standard.getObject(forKey: key) ?? Settings(countries: .load(), rounds: 5, flags: 3) }
+    
+}
+
+fileprivate extension Array where Element == Country {
+    
+    private static let file = "countries.json"
+    
+    static func load() -> Self {
+        do {
+            return try Bundle.main.load(file)
+        } catch { fatalError("Couldn't load countries: \(error)") }
+    }
+    
+}
+
+fileprivate extension Array where Element == Game {
+    
+    private static let file = FileManager.documentsDirectory.appendingPathComponent("games.json")
+    
+    func save() {
+        do {
+            let data = try JSONEncoder().encode(self)
+            try data.write(to: Self.file)
+        } catch { print("saving games failes: \(error)") }
+    }
+    
+    static func load() -> Self {
+        do {
+            let data = try Data(contentsOf: file),
+                decoded: [Game] = try JSONDecoder().decode(data)
+            return decoded
+        } catch {
+            print("loading games failes: \(error)")
+            return []
+        }
+    }
     
 }

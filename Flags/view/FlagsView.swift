@@ -26,10 +26,8 @@ struct FlagsView: View {
             }
             .foregroundColor(.white)
             
-            Round(round: game.round, tryCountry: state.try, newRound: state.newRound)
-                .padding()
+            Round(round: game.round, tryCountry: state.try, newRound: state.newRound).padding()
             
-            Spacer()
             Spacer()
             
             Text(~.scoreLabel(game.score), font: .title.bold(), color: .white)
