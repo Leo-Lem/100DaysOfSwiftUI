@@ -12,6 +12,14 @@ import MyOthers
 struct ContentView: View {
     var body: some View {
         VStack {
+            HStack {
+                Button(systemImage: "chevron.backward") { start(next: false) }
+                Text(rootWord, font: .largeTitle.weight(.medium)).padding()
+                Button(systemImage: "chevron.forward") { start(next: true) }
+            }
+            .foregroundColor(.primary)
+            .font(.title)
+            
             TextField("Enter your word", text: $newWord, onCommit: tryWord)
                 .textFieldStyle(.roundedBorder)
                 .padding()
@@ -34,24 +42,21 @@ struct ContentView: View {
             ToolbarItem(placement: .bottomBar) {
                 Text("Your score is \(score).", font: .headline)
             }
-            
-            ToolbarItem(placement: .automatic) {
-                Button("Start New Game", action: start)
-            }
-        }
-        .group { $0
-            .navigationTitle(rootWord)
-            .embedInNavigation()
-            .navigationViewStyle(.stack)
         }
     }
     
     @State private var error: ErrorKind? = nil
     @State private var newWord = ""
-    @State private var rootWord = words.randomElement() ?? "silkworm"
+    @State private var rootID = Int.random(in: 0..<words.count)
     @State private var usedWords = [String]()
     
+    private var rootWord: String { Self.words[rootID] }
     private var score: Int { usedWords.reduce(0, { $0 + $1.count }) }
+}
+
+extension Int {
+    mutating func increase(_ max: Int) { self += self < max ? 1 : -max }
+    mutating func decrease(_ min: Int) { self -= self > min ? 1 : -min }
 }
 
 extension ContentView {
@@ -61,12 +66,12 @@ extension ContentView {
             let raw = try? String(contentsOf: url)
         else { fatalError("Could not load start.txt from bundle.") }
         
-        return raw.components(separatedBy: "\n")
+        return raw.components(separatedBy: "\n").shuffled()
     }()
     
-    private func start() {
+    private func start(next: Bool) {
         self.usedWords.removeAll()
-        self.rootWord = Self.words.randomElement() ?? "silkworm"
+        next ? rootID.increase(Self.words.count) : rootID.decrease(0)
     }
     
     private func tryWord() {
@@ -99,11 +104,11 @@ extension ContentView {
         
         func error(_ word: String) -> (title: String, message: String) {
             switch self {
-            case .root: return ("'\(word)' is start word", "Obviously you can't just use the original word")
-            case .length: return ("'\(word)' is too short", "Only words with more than 2 letters allowed")
-            case .used: return ("'\(word)' was used already", "Be more original...")
-            case .illegal: return ("'\(word)' not recognized", "You can't just make them up, you know!")
-            case .unknown: return ("'\(word)' not possible", "That isn't an english word!")
+            case .root: return ("'\(word)' is start word...", "Obviously you can't just use the original word")
+            case .length: return ("'\(word)' is too short...", "Only words with more than 2 letters allowed")
+            case .used: return ("'\(word)' was used already...", "Be more original...")
+            case .illegal: return ("'\(word)' not recognized...", "You can't just make them up, you know!")
+            case .unknown: return ("'\(word)' not possible...", "That isn't an english word!")
             }
         }
     }
