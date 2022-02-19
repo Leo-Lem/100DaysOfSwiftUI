@@ -27,6 +27,7 @@ extension FlagsView {
                             .onTapGesture {
                                 tryCountry(country)
                                 answer = country
+                                withAnimation(.spring()) { rotation += .degrees(360) }
                             }
                             .if(let: round.triedAndCorrect(country)) { view, correct in
                                 view
@@ -34,7 +35,9 @@ extension FlagsView {
                                     .clipShape(.capsule)
                                     .disabled(true)
                                     .contextMenu { Text("\(country.localized)") }
+                                    .scaleEffect(0.9)
                             }
+                            .rotation3DEffect(answer == country ? rotation : .zero, axis: (x: 0, y: 1, z: 0))
                             .alert($answer) { answer in
                                 ~.answerAlertTitle(correct: round.correct(answer))
                             } actions: { answer in
@@ -53,6 +56,8 @@ extension FlagsView {
         }
         
         @State private var answer: Country? = nil
+        
+        @State private var rotation: Angle = .degrees(0)
         
         private var cols: [GridItem] { Array(repeating: GridItem(), count: (round.options.count + 2) / 3) }
     }

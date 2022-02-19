@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MySwiftUI
 
 extension FlagsView {
     struct FlagImage: View {
@@ -16,7 +17,7 @@ extension FlagsView {
                 .resizable()
                 .interpolation(.high)
                 .brightness(-0.1)
-                .clipShape(Capsule())
+                .clipShape(.capsule)
                 .shadow(radius: 10)
                 .aspectRatio(1.8/1, contentMode: .fit)
                 .frame(maxWidth: 200)
