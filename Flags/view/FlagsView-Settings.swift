@@ -41,9 +41,8 @@ extension FlagsView {
                 }
                 .navigationTitle(~.settingsLabel)
                 .toolbar {
-                    ToolbarItem(placement: .principal) {
+                    ToolbarItem(placement: .bottomBar) {
                         Button(~.saveAndNewGameButton, action: new)
-                            .buttonStyle(.borderedProminent)
                     }
                 }
             }

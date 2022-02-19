@@ -55,7 +55,7 @@ fileprivate extension Array where Element == Game {
     mutating func load() {
         do {
             let data = try Data(contentsOf: file),
-                decoded = try JSONDecoder().decode([Game].self, from: data)
+                decoded: [Game] = try JSONDecoder().decode(data)
             self = decoded
         } catch { print("loading games failes: \(error)") }
     }
@@ -66,6 +66,6 @@ fileprivate extension Settings {
     
     private var key: String { "settings" }
     func save() { UserDefaults.standard.setObject(self, forKey: key) }
-    mutating func load() { self = UserDefaults.standard.getObject(forKey: key, castTo: Self.self) ?? Settings(rounds: 5, flags: 3) }
+    mutating func load() { self = UserDefaults.standard.getObject(forKey: key) ?? Settings(rounds: 5, flags: 3) }
     
 }

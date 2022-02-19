@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6E1A498F27B9A5DF00A85AD8 /* MyPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 6E1A498E27B9A5DF00A85AD8 /* MyPackage */; };
 		6E1A49B327BA7BBE00A85AD8 /* FlagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1A49B227BA7BBE00A85AD8 /* FlagImage.swift */; };
-		6E1A49FF27BAA8C500A85AD8 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1A49FE27BAA8C500A85AD8 /* GameController.swift */; };
+		6E1A49FF27BAA8C500A85AD8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1A49FE27BAA8C500A85AD8 /* AppState.swift */; };
 		6E1A4A0127BAB2C900A85AD8 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1A4A0027BAB2C900A85AD8 /* Game.swift */; };
 		6E1A4A0327BAB2DE00A85AD8 /* Game-Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1A4A0227BAB2DE00A85AD8 /* Game-Round.swift */; };
 		6E1A4A0527BAB35F00A85AD8 /* FlagsView-Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1A4A0427BAB35F00A85AD8 /* FlagsView-Round.swift */; };
@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		6E1A498C27B9A0D800A85AD8 /* MyPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MyPackage; path = ../../../MyPackage; sourceTree = "<group>"; };
 		6E1A49B227BA7BBE00A85AD8 /* FlagImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagImage.swift; sourceTree = "<group>"; };
-		6E1A49FE27BAA8C500A85AD8 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		6E1A49FE27BAA8C500A85AD8 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		6E1A4A0027BAB2C900A85AD8 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		6E1A4A0227BAB2DE00A85AD8 /* Game-Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game-Round.swift"; sourceTree = "<group>"; };
 		6E1A4A0427BAB35F00A85AD8 /* FlagsView-Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlagsView-Round.swift"; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		6E1A49FD27BAA8B900A85AD8 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				6E1A49FE27BAA8C500A85AD8 /* GameController.swift */,
+				6E1A49FE27BAA8C500A85AD8 /* AppState.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -244,7 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EDDF44727B99BB400778CF3 /* Country.swift in Sources */,
-				6E1A49FF27BAA8C500A85AD8 /* GameController.swift in Sources */,
+				6E1A49FF27BAA8C500A85AD8 /* AppState.swift in Sources */,
 				6E1A4A0127BAB2C900A85AD8 /* Game.swift in Sources */,
 				6E1A49B327BA7BBE00A85AD8 /* FlagImage.swift in Sources */,
 				6E1A4A1027BBD1BC00A85AD8 /* localization.swift in Sources */,

@@ -31,11 +31,13 @@ extension FlagsView {
                             .if(let: round.triedAndCorrect(country)) { view, correct in
                                 view
                                     .overlay(correct ? .green.opacity(0.8) : .gray.opacity(0.5))
-                                    .clipShape(Capsule())
+                                    .clipShape(.capsule)
                                     .disabled(true)
                                     .contextMenu { Text("\(country.localized)") }
                             }
-                            .alert(~.answerAlertTitle(correct: round.correct(answer ?? .de)), item: $answer) { answer in
+                            .alert($answer) { answer in
+                                ~.answerAlertTitle(correct: round.correct(answer))
+                            } actions: { answer in
                                 Button(~.okButton) {
                                     if round.correct(answer) { newRound() }
                                 }
@@ -47,7 +49,7 @@ extension FlagsView {
             }
             .padding()
             .background(.regularMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: 20))
+            .clipShape(.roundedRectangle(cornerRadius: 20))
         }
         
         @State private var answer: Country? = nil
