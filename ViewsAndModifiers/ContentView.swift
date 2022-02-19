@@ -9,41 +9,28 @@ import SwiftUI
 import MySwiftUI
 
 struct ContentView: View {
-    @State private var section: Int = 0
+    @State private var section = 0
     
     var body: some View {
-        TabView(selection: $section) {
-                
-            Tab1().tag(1)
-                .navigationTitle(".background")
-                
-            Tab2().tag(2)
-                .navigationTitle("Modifier Order")
-                
-            Tab3().tag(3)
-                .navigationTitle("Conditional Modifiers")
-                
-            Tab4().tag(4)
-                .navigationTitle("Environment Modifiers")
-                
-            Tab5().tag(5)
-                .navigationTitle("Views as Properties")
-                
-            Tab6().tag(6)
-                .navigationTitle("View Composition")
-                
-            Tab7().tag(7)
-                .navigationTitle("Custom Modifiers")
-                
-            Tab8().tag(8)
-                .navigationTitle("custom containers")
-                
+        Group {
+            switch section {
+            case 0: Tab1().navigationTitle(".background")
+            case 1: Tab2().navigationTitle("Modifier Order")
+            case 2: Tab3().navigationTitle("Conditional Modifiers")
+            case 3: Tab4().navigationTitle("Environment Modifiers")
+            case 4: Tab5().navigationTitle("Views as Properties")
+            case 5: Tab6().navigationTitle("View Composition")
+            case 6: Tab7().navigationTitle("Custom Modifiers")
+            case 7: Tab8().navigationTitle("Custom Containers")
+            default: Text("Hello, this shouldn't be reachable...")
+            }
         }
-        .border(.primary)
-        .tabViewStyle(.page(indexDisplayMode: .never))
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .overlay(Divider(), alignment: .top)
+        .overlay(Divider(), alignment: .bottom)
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
-                Picker("Select Tab", selection: $section, items: 0..<8) { Text("\($0 + 1)") }
+                Picker("Select Tab", selection: $section, items: 0..<8) { Text($0 + 1, format: .number) }
                     .pickerStyle(.segmented)
             }
         }

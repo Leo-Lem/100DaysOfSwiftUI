@@ -6,25 +6,26 @@
 //
 
 import SwiftUI
+import MySwiftUI
 
 struct Tab1: View {
     var body: some View {
-        VStack {
-            Text("Hello, world!")
-                .padding()
-                .background(.red)
-                
-            Text("Hello, world!")
+        Text("Hello, world!")
+            .if(toggle) { $0
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(.red)
-        }
-        .frame(height: 400)
+            } else: { $0
+                .padding()
+            }
+            .background(.red)
+            .toolbar { Toggle("Max-Frame", isOn: $toggle)}
     }
+    
+    @State private var toggle = false
 }
 
 //MARK: - Previews
 struct Tab1_Previews: PreviewProvider {
     static var previews: some View {
-        Tab1()
+        Tab1().embedInNavigation()
     }
 }
