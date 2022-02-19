@@ -20,13 +20,15 @@ struct ContentView: View {
                 )
                 .keyboardType(.decimalPad)
                 .focused($amountFocused)
-                
+            }
+            
+            Section("How many people?") {
                 ExtendedSegmentedPicker($people, options: Array(2...50)) {
                     Text("\($0) people")
                 }
             }
             
-            Section("How much tip do you want to leave?") {
+            Section("How much do you want to tip?") {
                 ExtendedSegmentedPicker($tip, options: Array(stride(from: 0.0, through: 0.8, by: 0.05)), startAt: 2) {
                     Text($0, format: .percent)
                 }
@@ -36,26 +38,32 @@ struct ContentView: View {
                 Button {
                     guard let total = total else { return }
                     state.saveEntry(total: total, people: people, tip: tip)
+                    self.total = nil
+                    self.people = 2
+                    self.tip = 0.2
                 } label: {
                     Label("Pay", systemImage: "signature")
                 }
+                .disabled(total == nil)
                 .frame(maxWidth: .infinity)
             }
         }
-        .overlay(alignment: .bottom) {
-            Total(amount: total, people: people, tip: tip)
-                .background(.bar)
-        }
         .toolbar {
+            ToolbarItem(placement: .automatic) {
+                NavigationLink {
+                    History(entries: state.history)
+                } label: {
+                    Label("History", systemImage: "list.bullet.circle")
+                }
+            }
+            
+            ToolbarItem(placement: .bottomBar) {
+                if let total = total { Total(amount: total, people: people, tip: tip) }
+            }
+            
             ToolbarItemGroup(placement: .keyboard) {
                 Spacer()
                 Button("Done", action: { amountFocused = false })
-            }
-            
-            ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationLink {
-                    History(entries: state.history)
-                } label: { Label("History", systemImage: "list.bullet.circle")}
             }
         }
         .group { $0

@@ -12,26 +12,18 @@ extension ContentView {
         let entries: [Entry]
         
         var body: some View {
-            List(entries) { entry in
-                VStack {
-                    Divider()
+            List(entries.reversed()) { entry in
+                VStack(alignment: .leading) {
+                    Text(entry.timestamp, format: .dateTime, font: .caption.bold())
                     Total(amount: entry.total, people: entry.people, tip: entry.tip)
-                        .background {
-                            Text(entry.timestamp.formatted(date: .abbreviated, time: .shortened), font: .largeTitle.bold())
-                                .opacity(0.08)
-                                .rotationEffect(.degrees(-15))
-                                .multilineTextAlignment(.center)
-                                .contextMenu {
-                                    Text(entry.timestamp.formatted(date: .long, time: .shortened))
-                                }
-                        }
-                    Divider()
+                        .contextMenu { Text(entry.timestamp.formatted(date: .long, time: .shortened)) }
                 }
             }
         }
     }
 }
-typealias Total = ContentView.Total
+
+#if DEBUG
 //MARK: - Previews
 struct History_Previews: PreviewProvider {
     static var previews: some View {
@@ -42,3 +34,6 @@ struct History_Previews: PreviewProvider {
 extension Entry {
     static let example = Entry(total: 10, people: 6, tip: 0.4)
 }
+
+typealias Total = ContentView.Total
+#endif

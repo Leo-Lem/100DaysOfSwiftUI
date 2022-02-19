@@ -6,39 +6,39 @@
 //
 
 import SwiftUI
+import MySwiftUI
+import MyOthers
 
 extension ContentView {
     struct Total: View {
-        let amount: Double?, people: Int, tip: Double
+        let amount: Double, people: Int, tip: Double
         
         var body: some View {
-            HStack(spacing: 0) {
-                if amount != nil {
-                    Column(title: "Total", amount: (total.amount, totalPerPerson.amount))
-                    Column(title: "Tip", amount: (total.tip, totalPerPerson.tip))
-                        .if(tip < 0.1) { $0.foregroundColor(.red) }
-                        .if(tip > 0.2) { $0.foregroundColor(.green) }
-                    Column(title: "Grand Total", amount: (total.grand, totalPerPerson.grand))
+            HStack {
+                ForEach(columns, id: \.0) { column in
+                    Menu {
+                        Text("\(column.amount.formatted(.currency(code: currencyCode))) altogether.", font: .headline)
+                    } label: {
+                        VStack {
+                            Text(column.title, font: .caption.bold(), color: .secondary)
+                            Text(column.perPerson, format: .currency(code: currencyCode), font: .headline)
+                        }
+                        .if(column.title == "Tip" && tip < 0.1) { $0.foregroundColor(.red) }
+                        .if(column.title == "Tip" && tip > 0.2) { $0.foregroundColor(.green) }
+                    }
+                    .frame(maxWidth: .infinity)
                 }
             }
-            .padding(.vertical, 10)
         }
         
-        private var total: (amount: Double, tip: Double, grand: Double) {
-            let amount = amount ?? 0
-            let tip = amount * self.tip,
-                grand = amount + tip
-            
-            return (amount, tip, grand)
+        private var columns: [(title: String, amount: Double, perPerson: Double)] {
+            [
+                ("Amount/Person", amount, amount / people),
+                ("Tip/Person", amount * tip, amount * tip / people),
+                ("Total/Person", amount * (1 + tip), amount * (1 + tip) / people)
+            ]
         }
-        
-        private var totalPerPerson: (amount: Double, tip: Double, grand: Double) {
-            let amount = total.amount / Double(people),
-                tip = total.tip / Double(people),
-                grand = total.grand / Double(people)
-            
-            return (amount, tip, grand)
-        }
+        private var currencyCode: String { Locale.current.currencyCode ?? "USD" }
     }
 }
 
