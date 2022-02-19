@@ -10,7 +10,6 @@
 		6E1A49A027BA6F7D00A85AD8 /* ViewsAndModifiersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1A499F27BA6F7D00A85AD8 /* ViewsAndModifiersApp.swift */; };
 		6E1A49A227BA6F7D00A85AD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1A49A127BA6F7D00A85AD8 /* ContentView.swift */; };
 		6E1A49A427BA6F7E00A85AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E1A49A327BA6F7E00A85AD8 /* Assets.xcassets */; };
-		6E1A49A727BA6F7E00A85AD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E1A49A627BA6F7E00A85AD8 /* Preview Assets.xcassets */; };
 		6E1A49B127BA70E000A85AD8 /* MyPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 6E1A49B027BA70E000A85AD8 /* MyPackage */; };
 /* End PBXBuildFile section */
 
@@ -19,7 +18,6 @@
 		6E1A499F27BA6F7D00A85AD8 /* ViewsAndModifiersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsAndModifiersApp.swift; sourceTree = "<group>"; };
 		6E1A49A127BA6F7D00A85AD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6E1A49A327BA6F7E00A85AD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6E1A49A627BA6F7E00A85AD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6E1A49AE27BA70D700A85AD8 /* MyPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MyPackage; path = ../../../MyPackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,17 +57,8 @@
 				6E1A499F27BA6F7D00A85AD8 /* ViewsAndModifiersApp.swift */,
 				6E1A49A127BA6F7D00A85AD8 /* ContentView.swift */,
 				6E1A49A327BA6F7E00A85AD8 /* Assets.xcassets */,
-				6E1A49A527BA6F7E00A85AD8 /* Preview Content */,
 			);
 			path = ViewsAndModifiers;
-			sourceTree = "<group>";
-		};
-		6E1A49A527BA6F7E00A85AD8 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				6E1A49A627BA6F7E00A85AD8 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		6E1A49AD27BA70D700A85AD8 /* Packages */ = {
@@ -148,7 +137,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E1A49A727BA6F7E00A85AD8 /* Preview Assets.xcassets in Resources */,
 				6E1A49A427BA6F7E00A85AD8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +279,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ViewsAndModifiers/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4UUEFBYP76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -320,7 +308,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ViewsAndModifiers/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4UUEFBYP76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -9,134 +9,161 @@ import SwiftUI
 import MySwiftUI
 
 struct ContentView: View {
+    @State private var section: Int = 0
+    
     var body: some View {
-        Text("This is a title").prominentTitle()
-        
-        Section("background") {
-            VStack {
-                Text("Hello, world!")
-                    .padding()
-                    .background(.red)
-                    
-                Text("Hello, world!")
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(.red)
+        TabView(selection: $section) {
+            Section {
+                Text("This is a title")
+                    .prominentTitle()
             }
-            .frame(height: 400)
-        }
-        
-        Section("modifier order") {
-            ScrollView(.horizontal) {
+            .navigationTitle("A Modifier")
+            .tag(0)
+            
+            Section {
+                VStack {
+                    Text("Hello, world!")
+                        .padding()
+                        .background(.red)
+                        
+                    Text("Hello, world!")
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(.red)
+                }
+                .frame(height: 400)
+            }
+            .navigationTitle(".background")
+            .tag(1)
+            
+            Section {
+                VStack {
+                    Button("Hello, world!", action: { print(type(of: self.body)) })
+                        .background(.red)
+                        .frame(width: 150, height: 150)
+                    
+                    Button("Hello, world!", action: { print(type(of: self.body)) })
+                        .frame(width: 150, height: 150)
+                        .background(.red)
+                    
+                    Text("Hello, world!")
+                        .padding()
+                        .background(.red)
+                        .padding()
+                        .background(.blue)
+                        .padding()
+                        .background(.green)
+                        .padding()
+                        .background(.yellow)
+                }
+            }
+            .navigationTitle("Modifier Order")
+            .tag(2)
+            
+            Section {
+                VStack {
+                    Button("Hello, Kinsman!", toggle: $colors.red)
+                        .foregroundColor(colors.red ? .red : .blue)
+                    
+                    Divider()
+                    
+                    if colors.green {
+                        Button("Hello, Friend!", toggle: $colors.green)
+                            .foregroundColor(.green)
+                    } else {
+                        Button("Hello, Friend!", toggle: $colors.green)
+                            .foregroundColor(.blue)
+                    }
+                    
+                    Divider()
+                    
+                    Button("Hello, World!", toggle: $colors.yellow)
+                        .if(colors.yellow) { $0.foregroundColor(.yellow) }
+                }
+                .buttonStyle(.borderless)
+            }
+            .navigationTitle("Conditional Modifiers")
+            .tag(3)
+            
+            Section {
                 HStack {
-                    Button("Hello, world!", action: { print(type(of: self.body)) })
-                        .background(.red)
-                        .frame(width: 200, height: 200)
+                    VStack {
+                        Text("Gryffindor")
+                            .font(.largeTitle)
+                        Text("Hufflepuff")
+                        Text("Ravenclaw")
+                        Text("Slytherin")
+                    }
+                    .font(.title)
                     
-                    Button("Hello, world!", action: { print(type(of: self.body)) })
-                        .frame(width: 200, height: 200)
-                        .background(.red)
+                    Divider()
+                    
+                    VStack {
+                        Text("Gryffindor")
+                            .blur(radius: 0)
+                        Text("Hufflepuff")
+                        Text("Ravenclaw")
+                        Text("Slytherin")
+                    }
+                    .blur(radius: 5)
                 }
-                
-                Text("Hello, world!")
-                    .padding()
-                    .background(.red)
-                    .padding()
-                    .background(.blue)
-                    .padding()
-                    .background(.green)
-                    .padding()
-                    .background(.yellow)
             }
-        }
-        
-        Section("conditional modifiers") {
-            HStack {
-                Button("Hello World", toggle: $red)
-                    .foregroundColor(red ? .red : .blue)
-                
-                Divider()
-                Spacer()
-                
-                if red {
-                    Button("Hello World", toggle: $red)
-                        .foregroundColor(.red)
-                } else {
-                    Button("Hello World", toggle: $red)
-                        .foregroundColor(.blue)
-                }
-                
-                Spacer()
-                Divider()
-                
-                Button("Hello World", toggle: $red)
-                    .if(red) { $0.foregroundColor(.red) }
-            }
-            .buttonStyle(.borderless)
-        }
-        
-        Section("environment modifiers") {
-            HStack {
+            .navigationTitle("Environment Modifiers")
+            .tag(4)
+            
+            Section {
                 VStack {
-                    Text("Gryffindor")
-                        .font(.largeTitle)
-                    Text("Hufflepuff")
-                    Text("Ravenclaw")
-                    Text("Slytherin")
+                    motto1.foregroundColor(.red)
+                    motto2.foregroundColor(.blue)
                 }
-                .font(.title)
-                
-                Spacer()
-                Divider()
-                Spacer()
-                
+            }
+            .navigationTitle("Views as Properties")
+            .tag(5)
+            
+            Section {
                 VStack {
-                    Text("Gryffindor")
-                        .blur(radius: 0)
-                    Text("Hufflepuff")
-                    Text("Ravenclaw")
-                    Text("Slytherin")
+                    CapsuleText(text: "First")
+                        .foregroundColor(.white)
+                    CapsuleText(text: "Second")
+                        .foregroundColor(.yellow)
                 }
-                .blur(radius: 5)
+            }
+            .navigationTitle("View Composition")
+            .tag(6)
+            
+            Section {
+                VStack {
+                    Text("Hello, world!").modifier(Title())
+                    Color.blue
+                        .frame(width: 300, height: 200)
+                        .watermarked(with: "Hacking with Swift")
+                }
+            }
+            .navigationTitle("Custom Modifiers")
+            .tag(7)
+            
+            Section {
+                GridStack(rows: 4, columns: 4) { row, col in
+                    Image(systemName: "\(row * 4 + col).circle")
+                    Text("R\(row) C\(col)")
+                }
+            }
+            .navigationTitle("custom containers")
+            .tag(8)
+        }
+        .border(.primary)
+        .tabViewStyle(.page(indexDisplayMode: .never))
+        .toolbar {
+            ToolbarItem(placement: .bottomBar) {
+                Picker("Select Tab", selection: $section, items: 0..<8) { Text("\($0 + 1)") }
+                    .pickerStyle(.segmented)
             }
         }
-        
-        Section("views as properties") {
-            VStack {
-                motto1.foregroundColor(.red)
-                motto2.foregroundColor(.blue)
-            }
-        }
-        
-        Section("view composition") {
-            VStack {
-                CapsuleText(text: "First")
-                    .foregroundColor(.white)
-                CapsuleText(text: "Second")
-                    .foregroundColor(.yellow)
-            }
-        }
-        
-        Section("custom modifiers") {
-            VStack {
-                Text("Hello, world!").modifier(Title())
-                Color.blue
-                    .frame(width: 300, height: 200)
-                    .watermarked(with: "Hacking with Swift")
-            }
-        }
-        
-        Section("custom containers") {
-            GridStack(rows: 4, columns: 4) { row, col in
-                Image(systemName: "\(row * 4 + col).circle")
-                Text("R\(row) C\(col)")
-            }
-            .lineLimit(0)
-            .minimumScaleFactor(0.5)
-        }
+        .embedInNavigation()
+        .navigationViewStyle(.stack)
     }
     
     //MARK: - conditional modifiers
-    @State private var red = false
+    @State private var colors: (red: Bool, green: Bool, yellow: Bool) = (false, false, false)
     
     //MARK: - views as parameters
     let motto1 = Text("Draco dormiens"), motto2 = Text("nunquam titillandus")
@@ -217,6 +244,6 @@ struct GridStack<Content: View>: View {
 //MARK: - Previews
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Form { ContentView() }
+        ContentView()
     }
 }
