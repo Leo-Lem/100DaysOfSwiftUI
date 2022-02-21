@@ -34,7 +34,7 @@ class AppState: ObservableObject {
     }
     
     func newRound() {
-        rounds.append(round)
+        if !round.answers.isEmpty { rounds.append(round) }
         self.round = Round(settings)
     }
     

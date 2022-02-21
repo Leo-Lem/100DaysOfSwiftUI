@@ -11,8 +11,8 @@ import MySwiftUI
 struct ContentView: View {
     var body: some View {
         Form {
-            Section("Up to \(round.settings.table) \(round.settings.operation.rawValue) \(round.settings.table)") {
-                Text("What is \(round.current.lhs) \(round.current.op.rawValue) \(round.current.rhs)?", font: .headline)
+            Section("Up to \(round.settings.table) \(round.settings.operation.symbol) \(round.settings.table)") {
+                Text("What is \(round.current.lhs) \(round.current.op.symbol) \(round.current.rhs)?", font: .headline)
                 
                 TextField("e.g. 25", value: $answer, format: .number)
                     .keyboardType(.decimalPad)
@@ -87,6 +87,19 @@ private extension ContentView {
         state.newRound()
         self.menu = false
         self.answer = nil
+    }
+}
+
+extension Settings.Operation {
+    var symbol: String {
+        switch self {
+        case .add: return "+"
+        case .sub: return "-"
+        case .mul: return "x"
+        case .div: return "÷"
+        case .pow: return "^"
+        case .mod: return "%"
+        }
     }
 }
 

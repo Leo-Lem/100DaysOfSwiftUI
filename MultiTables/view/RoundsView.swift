@@ -15,14 +15,14 @@ struct HistoryView: View {
         List(rounds) { round in
             VStack {
                 HStack {
-                    Text("scored \(round.score)", font: .headline)
+                    Text("scored \(round.score) / \(round.answers.count)", font: .headline)
                     Spacer()
                     Text(round.timestamp, format: .dateTime, font: .caption.bold())
                 }
-                .padding()
-                
+                Divider()
                 ReviewView(round: round)
             }
+            .padding()
         }
         .navigationTitle("Rounds")
         .embedInNavigation()

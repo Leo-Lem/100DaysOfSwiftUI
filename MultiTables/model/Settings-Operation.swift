@@ -9,8 +9,8 @@ import Foundation
 import MyNumbers
 
 extension Settings {
-    enum Operation: String, CaseIterable, Codable {
-        case add = "+", sub = "-", mul = "*", div = "÷", pow = "^", mod = "%"
+    enum Operation: CaseIterable, Codable {
+        case add, sub, mul, div, pow, mod
         
         func operate(_ lhs: Int, _ rhs: Int) -> Int {
             switch self {

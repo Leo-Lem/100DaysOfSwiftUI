@@ -17,7 +17,7 @@ struct ReviewView: View {
             if let answer = answer {
                 HStack {
                     Text(question.lhs, format: .number)
-                    Text(question.op.rawValue)
+                    Text(question.op.symbol)
                     Text(question.rhs, format: .number)
                     Text("=")
                     Text(question.solution, format: .number)

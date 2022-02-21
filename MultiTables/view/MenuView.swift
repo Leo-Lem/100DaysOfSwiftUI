@@ -36,7 +36,7 @@ struct MenuView: View {
                     selection: $settings.operation,
                     items: Settings.Operation.allCases,
                     id: \.self
-                ) { Text($0.rawValue) }
+                ) { Text($0.symbol) }
                     .pickerStyle(.segmented)
             }
         }

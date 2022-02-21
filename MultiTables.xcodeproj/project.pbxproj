@@ -116,9 +116,9 @@
 		6EA4F79C27B699FA008778DE /* view */ = {
 			isa = PBXGroup;
 			children = (
+				6E54043C26C2EE60007DE192 /* MenuView.swift */,
 				6E54043E26C2EE66007DE192 /* ContentView.swift */,
 				6E1E95A727C2B267000B9A21 /* ReviewView.swift */,
-				6E54043C26C2EE60007DE192 /* MenuView.swift */,
 				6EEE626027C2C17A00662B71 /* RoundsView.swift */,
 			);
 			path = view;
