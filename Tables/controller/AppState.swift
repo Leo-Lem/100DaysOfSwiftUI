@@ -1,6 +1,6 @@
 //
 //  AppState.swift
-//  MultiTables
+//  Tables
 //
 //  Created by Leopold Lemmermann on 20.02.22.
 //
@@ -10,32 +10,52 @@ import MyStorage
 
 class AppState: ObservableObject {
     
+    @Published var screen: Screen = .menu
+    
     var settings: Settings {
         willSet { objectWillChange.send() }
         didSet { settings.save() }
     }
     
-    var round: Round {
+    var game: Game? {
         willSet { objectWillChange.send() }
-        didSet { round.save() }
+        didSet { game?.save() }
     }
     
-    var rounds: [Round] {
+    var history: [Game] {
         willSet { objectWillChange.send() }
-        didSet { rounds.save() }
+        didSet { history.save() }
     }
     
     init() {
         let settings: Settings = .load() ?? .default
         
         self.settings = settings
-        self.round = .load() ?? Round(settings)
-        self.rounds = .load() ?? []
+        self.history = .load() ?? []
+        self.game = .load()
     }
     
-    func newRound() {
-        if !round.answers.isEmpty { rounds.append(round) }
-        self.round = Round(settings)
+}
+
+extension AppState {
+    
+    enum Screen { case menu,
+                       game,
+                       settings,
+                       history
+    }
+    
+}
+
+extension AppState {
+    
+    func newGame() {
+        if let game = game, !game.answers.isEmpty { history.append(game) }
+        self.game = Game(settings)
+    }
+    
+    func submitAnswer(_ answer: Int) {
+        game?.submit(answer)
     }
     
 }
@@ -46,13 +66,13 @@ fileprivate extension Settings {
     static func load() -> Self? { UserDefaults.standard.getObject(forKey: key) }
 }
 
-fileprivate extension Round {
+fileprivate extension Game {
     private static let key: String = "round"
     func save() { UserDefaults.standard.setObject(self, forKey: Self.key) }
     static func load() -> Self? { UserDefaults.standard.getObject(forKey: key) }
 }
 
-fileprivate extension Array where Element == Round {
+fileprivate extension Array where Element == Game {
     private static let file: String = "rounds.json"
     func save() { try? FileManager.default.save(self, file: Self.file) }
     static func load() -> Self? { try? FileManager.default.load(file) }

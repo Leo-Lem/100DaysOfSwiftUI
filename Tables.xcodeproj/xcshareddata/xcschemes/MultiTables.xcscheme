@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6E52D17526C17BBF00EDBEA2"
-               BuildableName = "MultiTables.app"
-               BlueprintName = "MultiTables"
-               ReferencedContainer = "container:MultiTables.xcodeproj">
+               BuildableName = "Tables.app"
+               BlueprintName = "Tables"
+               ReferencedContainer = "container:Tables.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E52D17526C17BBF00EDBEA2"
-            BuildableName = "MultiTables.app"
-            BlueprintName = "MultiTables"
-            ReferencedContainer = "container:MultiTables.xcodeproj">
+            BuildableName = "Tables.app"
+            BlueprintName = "Tables"
+            ReferencedContainer = "container:Tables.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E52D17526C17BBF00EDBEA2"
-            BuildableName = "MultiTables.app"
-            BlueprintName = "MultiTables"
-            ReferencedContainer = "container:MultiTables.xcodeproj">
+            BuildableName = "Tables.app"
+            BlueprintName = "Tables"
+            ReferencedContainer = "container:Tables.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

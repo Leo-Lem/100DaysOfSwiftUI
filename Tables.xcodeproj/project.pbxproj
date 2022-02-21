@@ -7,34 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E1E95A227C2A12B000B9A21 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1E95A127C2A12B000B9A21 /* Round.swift */; };
-		6E1E95A427C2A836000B9A21 /* Round-Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1E95A327C2A836000B9A21 /* Round-Question.swift */; };
+		6E1E95A227C2A12B000B9A21 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1E95A127C2A12B000B9A21 /* Game.swift */; };
+		6E1E95A427C2A836000B9A21 /* Game-Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1E95A327C2A836000B9A21 /* Game-Question.swift */; };
 		6E1E95A627C2A83D000B9A21 /* Settings-Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1E95A527C2A83D000B9A21 /* Settings-Operation.swift */; };
 		6E1E95A827C2B267000B9A21 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1E95A727C2B267000B9A21 /* ReviewView.swift */; };
-		6E52D17A26C17BBF00EDBEA2 /* MultiTablesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E52D17926C17BBF00EDBEA2 /* MultiTablesApp.swift */; };
+		6E52D17A26C17BBF00EDBEA2 /* TablesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E52D17926C17BBF00EDBEA2 /* TablesApp.swift */; };
 		6E52D17E26C17BC400EDBEA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E52D17D26C17BC400EDBEA2 /* Assets.xcassets */; };
 		6E54043D26C2EE60007DE192 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E54043C26C2EE60007DE192 /* MenuView.swift */; };
-		6E54043F26C2EE66007DE192 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E54043E26C2EE66007DE192 /* ContentView.swift */; };
+		6E54043F26C2EE66007DE192 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E54043E26C2EE66007DE192 /* GameView.swift */; };
 		6E89A89127C25EB000BA55EB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89A89027C25EB000BA55EB /* Settings.swift */; };
 		6EA4F79727B6925F008778DE /* MyPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 6EA4F79627B6925F008778DE /* MyPackage */; };
 		6EAC1F4526D26739000F3B7D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAC1F4426D26739000F3B7D /* AppState.swift */; };
-		6EEE626127C2C17A00662B71 /* RoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEE626027C2C17A00662B71 /* RoundsView.swift */; };
+		6EEE626127C2C17A00662B71 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEE626027C2C17A00662B71 /* HistoryView.swift */; };
+		6EEE626627C3DF3F00662B71 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEE626527C3DF3F00662B71 /* SettingsView.swift */; };
+		6EEE626927C3E0C000662B71 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEE626827C3E0C000662B71 /* LogoView.swift */; };
+		6EEE626D27C3E13100662B71 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEE626C27C3E13100662B71 /* Background.swift */; };
+		6EEE626F27C3E8E200662B71 /* menuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEE626E27C3E8E200662B71 /* menuButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6E1E95A127C2A12B000B9A21 /* Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
-		6E1E95A327C2A836000B9A21 /* Round-Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Round-Question.swift"; sourceTree = "<group>"; };
+		6E1E95A127C2A12B000B9A21 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		6E1E95A327C2A836000B9A21 /* Game-Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game-Question.swift"; sourceTree = "<group>"; };
 		6E1E95A527C2A83D000B9A21 /* Settings-Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings-Operation.swift"; sourceTree = "<group>"; };
 		6E1E95A727C2B267000B9A21 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
-		6E52D17626C17BBF00EDBEA2 /* MultiTables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiTables.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E52D17926C17BBF00EDBEA2 /* MultiTablesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiTablesApp.swift; sourceTree = "<group>"; };
+		6E52D17626C17BBF00EDBEA2 /* Tables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tables.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E52D17926C17BBF00EDBEA2 /* TablesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesApp.swift; sourceTree = "<group>"; };
 		6E52D17D26C17BC400EDBEA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E54043C26C2EE60007DE192 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
-		6E54043E26C2EE66007DE192 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6E54043E26C2EE66007DE192 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		6E89A89027C25EB000BA55EB /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		6EA4F79427B69251008778DE /* MyPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MyPackage; path = ../../../MyPackage; sourceTree = "<group>"; };
 		6EAC1F4426D26739000F3B7D /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		6EEE626027C2C17A00662B71 /* RoundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundsView.swift; sourceTree = "<group>"; };
+		6EEE626027C2C17A00662B71 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		6EEE626527C3DF3F00662B71 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		6EEE626827C3E0C000662B71 /* LogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		6EEE626C27C3E13100662B71 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		6EEE626E27C3E8E200662B71 /* menuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				6EA4F79327B69251008778DE /* Packages */,
-				6E52D17826C17BBF00EDBEA2 /* MultiTables */,
+				6E52D17826C17BBF00EDBEA2 /* Tables */,
 				6E52D17726C17BBF00EDBEA2 /* Products */,
 				6EA4F79527B6925F008778DE /* Frameworks */,
 			);
@@ -62,21 +70,21 @@
 		6E52D17726C17BBF00EDBEA2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E52D17626C17BBF00EDBEA2 /* MultiTables.app */,
+				6E52D17626C17BBF00EDBEA2 /* Tables.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6E52D17826C17BBF00EDBEA2 /* MultiTables */ = {
+		6E52D17826C17BBF00EDBEA2 /* Tables */ = {
 			isa = PBXGroup;
 			children = (
-				6E52D17926C17BBF00EDBEA2 /* MultiTablesApp.swift */,
+				6E52D17926C17BBF00EDBEA2 /* TablesApp.swift */,
 				6EA4F79827B695D0008778DE /* model */,
 				6EA4F79B27B699E4008778DE /* controller */,
 				6EA4F79C27B699FA008778DE /* view */,
 				6EEE626227C2C3C500662B71 /* resources */,
 			);
-			path = MultiTables;
+			path = Tables;
 			sourceTree = "<group>";
 		};
 		6EA4F79327B69251008778DE /* Packages */ = {
@@ -99,8 +107,8 @@
 			children = (
 				6E89A89027C25EB000BA55EB /* Settings.swift */,
 				6E1E95A527C2A83D000B9A21 /* Settings-Operation.swift */,
-				6E1E95A127C2A12B000B9A21 /* Round.swift */,
-				6E1E95A327C2A836000B9A21 /* Round-Question.swift */,
+				6E1E95A127C2A12B000B9A21 /* Game.swift */,
+				6E1E95A327C2A836000B9A21 /* Game-Question.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -117,9 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				6E54043C26C2EE60007DE192 /* MenuView.swift */,
-				6E54043E26C2EE66007DE192 /* ContentView.swift */,
-				6E1E95A727C2B267000B9A21 /* ReviewView.swift */,
-				6EEE626027C2C17A00662B71 /* RoundsView.swift */,
+				6EEE627027C3FAA700662B71 /* details */,
+				6EEE626727C3E0B500662B71 /* blocks */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -132,12 +139,33 @@
 			path = resources;
 			sourceTree = "<group>";
 		};
+		6EEE626727C3E0B500662B71 /* blocks */ = {
+			isa = PBXGroup;
+			children = (
+				6E1E95A727C2B267000B9A21 /* ReviewView.swift */,
+				6EEE626827C3E0C000662B71 /* LogoView.swift */,
+				6EEE626C27C3E13100662B71 /* Background.swift */,
+				6EEE626E27C3E8E200662B71 /* menuButton.swift */,
+			);
+			path = blocks;
+			sourceTree = "<group>";
+		};
+		6EEE627027C3FAA700662B71 /* details */ = {
+			isa = PBXGroup;
+			children = (
+				6E54043E26C2EE66007DE192 /* GameView.swift */,
+				6EEE626527C3DF3F00662B71 /* SettingsView.swift */,
+				6EEE626027C2C17A00662B71 /* HistoryView.swift */,
+			);
+			path = details;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6E52D17526C17BBF00EDBEA2 /* MultiTables */ = {
+		6E52D17526C17BBF00EDBEA2 /* Tables */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E52D18526C17BC400EDBEA2 /* Build configuration list for PBXNativeTarget "MultiTables" */;
+			buildConfigurationList = 6E52D18526C17BC400EDBEA2 /* Build configuration list for PBXNativeTarget "Tables" */;
 			buildPhases = (
 				6E52D17226C17BBF00EDBEA2 /* Sources */,
 				6E52D17326C17BBF00EDBEA2 /* Frameworks */,
@@ -147,12 +175,12 @@
 			);
 			dependencies = (
 			);
-			name = MultiTables;
+			name = Tables;
 			packageProductDependencies = (
 				6EA4F79627B6925F008778DE /* MyPackage */,
 			);
 			productName = LeosMultiplicationTables;
-			productReference = 6E52D17626C17BBF00EDBEA2 /* MultiTables.app */;
+			productReference = 6E52D17626C17BBF00EDBEA2 /* Tables.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -169,7 +197,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6E52D17126C17BBE00EDBEA2 /* Build configuration list for PBXProject "MultiTables" */;
+			buildConfigurationList = 6E52D17126C17BBE00EDBEA2 /* Build configuration list for PBXProject "Tables" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -182,7 +210,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6E52D17526C17BBF00EDBEA2 /* MultiTables */,
+				6E52D17526C17BBF00EDBEA2 /* Tables */,
 			);
 		};
 /* End PBXProject section */
@@ -204,15 +232,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E89A89127C25EB000BA55EB /* Settings.swift in Sources */,
+				6EEE626D27C3E13100662B71 /* Background.swift in Sources */,
+				6EEE626927C3E0C000662B71 /* LogoView.swift in Sources */,
 				6E1E95A827C2B267000B9A21 /* ReviewView.swift in Sources */,
 				6E54043D26C2EE60007DE192 /* MenuView.swift in Sources */,
 				6EAC1F4526D26739000F3B7D /* AppState.swift in Sources */,
-				6E54043F26C2EE66007DE192 /* ContentView.swift in Sources */,
-				6E1E95A427C2A836000B9A21 /* Round-Question.swift in Sources */,
+				6EEE626F27C3E8E200662B71 /* menuButton.swift in Sources */,
+				6E54043F26C2EE66007DE192 /* GameView.swift in Sources */,
+				6E1E95A427C2A836000B9A21 /* Game-Question.swift in Sources */,
 				6E1E95A627C2A83D000B9A21 /* Settings-Operation.swift in Sources */,
-				6E1E95A227C2A12B000B9A21 /* Round.swift in Sources */,
-				6E52D17A26C17BBF00EDBEA2 /* MultiTablesApp.swift in Sources */,
-				6EEE626127C2C17A00662B71 /* RoundsView.swift in Sources */,
+				6E1E95A227C2A12B000B9A21 /* Game.swift in Sources */,
+				6E52D17A26C17BBF00EDBEA2 /* TablesApp.swift in Sources */,
+				6EEE626127C2C17A00662B71 /* HistoryView.swift in Sources */,
+				6EEE626627C3DF3F00662B71 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +386,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = LeoLem.MultiTables;
+				PRODUCT_BUNDLE_IDENTIFIER = LeoLem.Tables;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -380,7 +412,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = LeoLem.MultiTables;
+				PRODUCT_BUNDLE_IDENTIFIER = LeoLem.Tables;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -390,7 +422,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6E52D17126C17BBE00EDBEA2 /* Build configuration list for PBXProject "MultiTables" */ = {
+		6E52D17126C17BBE00EDBEA2 /* Build configuration list for PBXProject "Tables" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E52D18326C17BC400EDBEA2 /* Debug */,
@@ -399,7 +431,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E52D18526C17BC400EDBEA2 /* Build configuration list for PBXNativeTarget "MultiTables" */ = {
+		6E52D18526C17BC400EDBEA2 /* Build configuration list for PBXNativeTarget "Tables" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E52D18626C17BC400EDBEA2 /* Debug */,
