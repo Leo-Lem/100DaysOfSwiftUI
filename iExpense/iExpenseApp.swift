@@ -2,7 +2,7 @@
 //  iExpenseApp.swift
 //  iExpense
 //
-//  Created by Leopold Lemmermann on 13.08.21.
+//  Created by Leopold Lemmermann on 22.02.22.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct iExpenseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ItemsView()
         }
     }
 }
