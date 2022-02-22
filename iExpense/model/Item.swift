@@ -9,7 +9,8 @@ import Foundation
 
 struct Item: Identifiable, Codable, Equatable {
     
-    let id: UUID
+    let id: UUID,
+        timestamp: Date
     
     var name: String,
         kind: Kind
@@ -20,6 +21,8 @@ struct Item: Identifiable, Codable, Equatable {
     
     init(_ name: String, kind: Kind, amount: Double) {
         self.id = UUID()
+        self.timestamp = Date()
+        
         self.name = name
         self.kind = kind
         self.amount = amount

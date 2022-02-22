@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6E23F52527C52D8A00FF0DE8 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E23F52427C52D8A00FF0DE8 /* EditView.swift */; };
 		6E23F52727C5393F00FF0DE8 /* item-amount-formatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E23F52627C5393F00FF0DE8 /* item-amount-formatted.swift */; };
-		6E23F52927C5511A00FF0DE8 /* Item-kindCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E23F52827C5511A00FF0DE8 /* Item-kindCategory.swift */; };
+		6E23F52D27C56E7300FF0DE8 /* ItemsView-Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E23F52C27C56E7300FF0DE8 /* ItemsView-Filter.swift */; };
 		6E386A2A26C6CDC000BAEDD1 /* iExpenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E386A2926C6CDC000BAEDD1 /* iExpenseApp.swift */; };
 		6E386A2C26C6CDC000BAEDD1 /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E386A2B26C6CDC000BAEDD1 /* ItemsView.swift */; };
 		6E386A2E26C6CDC100BAEDD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E386A2D26C6CDC100BAEDD1 /* Assets.xcassets */; };
@@ -25,7 +25,8 @@
 /* Begin PBXFileReference section */
 		6E23F52427C52D8A00FF0DE8 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		6E23F52627C5393F00FF0DE8 /* item-amount-formatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "item-amount-formatted.swift"; sourceTree = "<group>"; };
-		6E23F52827C5511A00FF0DE8 /* Item-kindCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-kindCategory.swift"; sourceTree = "<group>"; };
+		6E23F52A27C5560800FF0DE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E23F52C27C56E7300FF0DE8 /* ItemsView-Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemsView-Filter.swift"; sourceTree = "<group>"; };
 		6E386A2626C6CDC000BAEDD1 /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E386A2926C6CDC000BAEDD1 /* iExpenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseApp.swift; sourceTree = "<group>"; };
 		6E386A2B26C6CDC000BAEDD1 /* ItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsView.swift; sourceTree = "<group>"; };
@@ -84,6 +85,7 @@
 		6EEE627127C50C8B00662B71 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				6E23F52A27C5560800FF0DE8 /* Info.plist */,
 				6E386A2D26C6CDC100BAEDD1 /* Assets.xcassets */,
 			);
 			path = resources;
@@ -135,6 +137,7 @@
 		6EEE628027C51ADA00662B71 /* blocks */ = {
 			isa = PBXGroup;
 			children = (
+				6E23F52C27C56E7300FF0DE8 /* ItemsView-Filter.swift */,
 				6EEE627E27C51AD800662B71 /* ItemView.swift */,
 			);
 			path = blocks;
@@ -144,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				6EEE628227C51C6D00662B71 /* Item-Kind-label.swift */,
-				6E23F52827C5511A00FF0DE8 /* Item-kindCategory.swift */,
 				6EEE628427C51C9700662B71 /* Item-amount-color.swift */,
 				6E23F52627C5393F00FF0DE8 /* item-amount-formatted.swift */,
 			);
@@ -224,12 +226,12 @@
 			files = (
 				6EEE627827C50D7E00662B71 /* AppState.swift in Sources */,
 				6EEE627F27C51AD800662B71 /* ItemView.swift in Sources */,
+				6E23F52D27C56E7300FF0DE8 /* ItemsView-Filter.swift in Sources */,
 				6E386A2C26C6CDC000BAEDD1 /* ItemsView.swift in Sources */,
 				6EEE628727C5229900662B71 /* Item-Kind.swift in Sources */,
 				6E386A2A26C6CDC000BAEDD1 /* iExpenseApp.swift in Sources */,
 				6E23F52527C52D8A00FF0DE8 /* EditView.swift in Sources */,
 				6E23F52727C5393F00FF0DE8 /* item-amount-formatted.swift in Sources */,
-				6E23F52927C5511A00FF0DE8 /* Item-kindCategory.swift in Sources */,
 				6EEE627527C50D5F00662B71 /* Item.swift in Sources */,
 				6EEE628527C51C9700662B71 /* Item-amount-color.swift in Sources */,
 				6EEE628327C51C6D00662B71 /* Item-Kind-label.swift in Sources */,
@@ -362,11 +364,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0;
-				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4UUEFBYP76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_FILE = iExpense/resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -387,11 +391,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0;
-				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4UUEFBYP76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_FILE = iExpense/resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

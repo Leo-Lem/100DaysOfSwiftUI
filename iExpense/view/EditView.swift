@@ -17,9 +17,9 @@ struct EditView: View {
                 TextField("Name", text: $item.name)
                     .focused($focus, equals: .name)
                 
-                Picker("", selection: $item.kind, items: item.kind.allCases, id: \.self) { Text($0.specificLabel) }
+                Picker("", selection: $item.kind, items: item.kind.cases[item.kind.category]!, id: \.self) { Text($0.label) }
                 
-                Picker("", selection: $item.kindCategory, items: Item.Kind.allCases, id: \.self) { Text($0.label) }
+                Picker("", selection: $item.kind.category, items: Item.Kind.Category.allCases, id: \.self) { Text($0.label) }
                 
                 let code = Locale.current.currencyCode ?? "USD"
                 TextField(

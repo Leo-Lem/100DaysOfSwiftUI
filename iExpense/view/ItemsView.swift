@@ -10,39 +10,63 @@ import MySwiftUI
 
 struct ItemsView: View {
     var body: some View {
-        List {
-            ForEach(state.items.reversed()) { item in
-                ItemView(item: item)
-                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
-                        Button("Delete", role: .destructive) { state.removeItem(item)}
-                        Button("Edit") { currentItem = item }
-                    }
-                    .sheet(item: $currentItem) {
-                        EditView($0, editItem: editItem)
-                            .navigationTitle(currentItem?.name.isEmpty ?? true ? "Add Entry" : "Edit Entry")
-                            .toolbar {
-                                ToolbarItem(placement: .navigationBarLeading) {
-                                    if !(currentItem?.name.isEmpty ?? true) { Button("Cancel") { editItem(nil) } }
-                                }
+        Group {
+            let items = filter.filter(state.items).reversed()
+            if items.isEmpty {
+                Text("Nothing to see here")
+            } else {
+                List {
+                    ForEach(items) { item in
+                        ItemView(item: item)
+                            .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                                Button("Delete", role: .destructive) { state.removeItem(item)}
+                                Button("Edit") { currentItem = item }
                             }
-                            .embedInNavigation()
-                            .navigationViewStyle(.stack)
                     }
+                    .onDelete { state.removeItems(at: $0) }
+                }
             }
-            .onDelete { state.removeItems(at: $0) }
         }
-        
+        .sheet(item: $currentItem) {
+            EditView($0, editItem: editItem)
+                .navigationTitle(currentItem?.name.isEmpty ?? true ? "Add Entry" : "Edit Entry")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        if !(currentItem?.name.isEmpty ?? true) { Button("Cancel") { editItem(nil) } }
+                    }
+                }
+                .embedInNavigation()
+                .navigationViewStyle(.stack)
+        }
         .navigationTitle("iExpense")
         .toolbar {
-            ToolbarItem { EditButton() }
-            
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(systemImage: "plus") { currentItem = Item("", kind: .expense(.living), amount: 0) }
+                Button(systemImage: "plus") { currentItem = Item("", kind: .living, amount: 0) }
             }
+            
+            ToolbarItem(placement: .navigationBarLeading) {
+                Picker("", selection: $filter, items: Filter.allCases, id: \.self) { Text($0.label) }
+            }
+            
+#if DEBUG
+ToolbarItem(placement: .bottomBar) {
+    Button("Add Entries") {
+        for i in 0..<10 {
+            state.editItem(Item(
+                "Item #\(i)",
+                kind: Item.Kind.allCases.randomElement()!,
+                amount: Double.random(in: 1...1000)
+            ))
+        }
+    }
+}
+#endif
         }
         .embedInNavigation()
         .navigationViewStyle(.stack)
     }
+    
+    @State private var filter: Filter = .none
     
     @State private var currentItem: Item? = nil
     

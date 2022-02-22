@@ -6,23 +6,27 @@
 //
 
 import Foundation
+import MyOthers
 
 extension Item {
     
-    enum Kind: Hashable, Codable {
-        case income(Income = .salary),
-             expense(Expense = .living)
+    enum Kind: CaseIterable, Hashable, Codable, Equatable {
+        case salary, capitalGains
+        case living, recreation, business
         
-        enum Income: CaseIterable, Hashable, Codable {
-            case salary, capitalGains
+        var category: Category {
+            get { (cases.first(where: { $0.value.contains(self) })?.key)!  }
+            set { self = (cases[newValue]?.first)! }
         }
         
-        enum Expense: CaseIterable, Hashable, Codable {
-            case living, recreation, business
-        }
+        var cases: [Category: [Kind]] {[
+                .income: [.salary, .capitalGains],
+                .expense: [.living, .recreation, .business]
+        ]}
         
-        init(_ income: Income) { self = .income(income) }
-        init(_ expense: Expense) { self = .expense(expense) }
+        enum Category: CaseIterable {
+            case income, expense
+        }
     }
     
 }

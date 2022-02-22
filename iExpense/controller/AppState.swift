@@ -11,7 +11,7 @@ import MyCollections
 
 @MainActor class AppState: ObservableObject {
     
-    @Published var items: [Item] = .load() ?? [] {
+    @Published private(set) var items: [Item] = .load() ?? [] {
         didSet { items.save() }
     }
     

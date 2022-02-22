@@ -9,7 +9,7 @@ import SwiftUI
 
 extension Item {
     var amountColor: Color {
-        switch self.kind {
+        switch self.kind.category {
         case .income:
             switch self.amount {
             case 0: return .primary

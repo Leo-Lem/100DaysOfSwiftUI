@@ -15,7 +15,7 @@ struct ItemView: View {
         HStack {
             VStack(alignment: .leading) {
                 Text(item.name, font: .headline)
-                Text(item.kind.specificLabel)
+                Text(item.kind.label)
             }
             
             Spacer()
@@ -23,7 +23,7 @@ struct ItemView: View {
             Text(item.formattedAmount, font: .headline, color: item.amountColor)
         }
         .accessibilityElement()
-        .accessibilityLabel("\(item.name), a \(item.kind.specificLabel) (\(item.kind.label)) amounting to \(item.amount)$")
+        .accessibilityLabel("\(item.name), a \(item.kind.label) (\(item.kind.label)) amounting to \(item.amount)$")
     }
 }
 
@@ -36,6 +36,6 @@ struct ItemView_Previews: PreviewProvider {
 }
 
 extension Item {
-    static let example = Item("Groceries", kind: .expense(.living), amount: 34.26)
+    static let example = Item("Groceries", kind: .living, amount: 34.26)
 }
 #endif
