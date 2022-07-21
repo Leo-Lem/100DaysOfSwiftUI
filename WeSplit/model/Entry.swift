@@ -11,6 +11,7 @@ struct Entry: Identifiable, Codable {
     
     let id: UUID,
         timestamp: Date
+    
     let total: Double,
         people: Int,
         tip: Double

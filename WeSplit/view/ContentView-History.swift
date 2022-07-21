@@ -12,6 +12,8 @@ extension ContentView {
         let entries: [Entry]
         
         var body: some View {
+            if entries.isEmpty { Text("Nothing to see here") }
+            
             List(entries.reversed()) { entry in
                 VStack(alignment: .leading) {
                     Text(entry.timestamp, format: .dateTime, font: .caption.bold())

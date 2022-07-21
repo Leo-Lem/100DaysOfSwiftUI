@@ -49,6 +49,11 @@ struct ContentView: View {
             }
         }
         .toolbar {
+            
+        }
+        .toolbar {
+            KeyboardDoneButton($amountFocused)
+            
             ToolbarItem(placement: .automatic) {
                 NavigationLink {
                     History(entries: state.history)
@@ -59,11 +64,6 @@ struct ContentView: View {
             
             ToolbarItem(placement: .bottomBar) {
                 if let total = total { Total(amount: total, people: people, tip: tip) }
-            }
-            
-            ToolbarItemGroup(placement: .keyboard) {
-                Spacer()
-                Button("Done", action: { amountFocused = false })
             }
         }
         .group { $0

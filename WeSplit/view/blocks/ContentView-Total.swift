@@ -7,7 +7,7 @@
 
 import SwiftUI
 import MySwiftUI
-import MyOthers
+import MyNumbers
 
 extension ContentView {
     struct Total: View {
@@ -23,8 +23,8 @@ extension ContentView {
                             Text(column.title, font: .caption.bold(), color: .secondary)
                             Text(column.perPerson, format: .currency(code: currencyCode), font: .headline)
                         }
-                        .if(column.title == "Tip" && tip < 0.1) { $0.foregroundColor(.red) }
-                        .if(column.title == "Tip" && tip > 0.2) { $0.foregroundColor(.green) }
+                        .if(column.title.contains("Tip") && tip < 0.1) { $0.foregroundColor(.red) }
+                        .if(column.title.contains("Tip") && tip > 0.2) { $0.foregroundColor(.blue) }
                     }
                     .frame(maxWidth: .infinity)
                 }
@@ -45,6 +45,6 @@ extension ContentView {
 //MARK: - Previews
 struct TotalView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView.Total(amount: 10.2, people: 2, tip: 0)
+        ContentView.Total(amount: 10, people: 2, tip: 0.8)
     }
 }

@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E424F6A288989D500B142A6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E424F69288989D500B142A6 /* Colors.xcassets */; };
 		6E6877A827B9142000098C43 /* WeSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6877A727B9142000098C43 /* WeSplitApp.swift */; };
 		6E6877AA27B9142000098C43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6877A927B9142000098C43 /* ContentView.swift */; };
 		6E6877AC27B9142100098C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E6877AB27B9142100098C43 /* Assets.xcassets */; };
 		6E91855127BD267000984385 /* ContentView-History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E91855027BD267000984385 /* ContentView-History.swift */; };
 		6E91855527BD277D00984385 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E91855427BD277D00984385 /* Entry.swift */; };
 		6E91855727BD288100984385 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E91855627BD288100984385 /* AppState.swift */; };
-		6EAC723A27B91697001B6BF9 /* MyPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 6EAC723927B91697001B6BF9 /* MyPackage */; };
 		6EDDF42927B93F7400778CF3 /* ContentView-Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDDF42827B93F7400778CF3 /* ContentView-Total.swift */; };
+		8AF2E79C28634D5C007FCBD2 /* MyPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8AF2E79B28634D5C007FCBD2 /* MyPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E23F52F27C66C2D00FF0DE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E424F69288989D500B142A6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		6E6877A427B9142000098C43 /* WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E6877A727B9142000098C43 /* WeSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitApp.swift; sourceTree = "<group>"; };
 		6E6877A927B9142000098C43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -25,8 +28,8 @@
 		6E91855027BD267000984385 /* ContentView-History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-History.swift"; sourceTree = "<group>"; };
 		6E91855427BD277D00984385 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		6E91855627BD288100984385 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		6EAC723727B91691001B6BF9 /* MyPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MyPackage; path = ../../../MyPackage; sourceTree = "<group>"; };
 		6EDDF42827B93F7400778CF3 /* ContentView-Total.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-Total.swift"; sourceTree = "<group>"; };
+		8AF2E79A28634D44007FCBD2 /* mypkg */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = mypkg; path = ../../../mypkg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,13 +37,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EAC723A27B91697001B6BF9 /* MyPackage in Frameworks */,
+				8AF2E79C28634D5C007FCBD2 /* MyPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E23F52B27C55C6200FF0DE8 /* blocks */ = {
+			isa = PBXGroup;
+			children = (
+				6EDDF42827B93F7400778CF3 /* ContentView-Total.swift */,
+			);
+			path = blocks;
+			sourceTree = "<group>";
+		};
 		6E68779B27B9142000098C43 = {
 			isa = PBXGroup;
 			children = (
@@ -75,8 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				6E6877A927B9142000098C43 /* ContentView.swift */,
-				6EDDF42827B93F7400778CF3 /* ContentView-Total.swift */,
 				6E91855027BD267000984385 /* ContentView-History.swift */,
+				6E23F52B27C55C6200FF0DE8 /* blocks */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -84,7 +95,9 @@
 		6E91854D27BD15DF00984385 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				6E23F52F27C66C2D00FF0DE8 /* Info.plist */,
 				6E6877AB27B9142100098C43 /* Assets.xcassets */,
+				6E424F69288989D500B142A6 /* Colors.xcassets */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -108,7 +121,7 @@
 		6EAC723627B91691001B6BF9 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				6EAC723727B91691001B6BF9 /* MyPackage */,
+				8AF2E79A28634D44007FCBD2 /* mypkg */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -137,7 +150,7 @@
 			);
 			name = WeSplit;
 			packageProductDependencies = (
-				6EAC723927B91697001B6BF9 /* MyPackage */,
+				8AF2E79B28634D5C007FCBD2 /* MyPackage */,
 			);
 			productName = WeSplit;
 			productReference = 6E6877A427B9142000098C43 /* WeSplit.app */;
@@ -182,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E6877AC27B9142100098C43 /* Assets.xcassets in Resources */,
+				6E424F6A288989D500B142A6 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,13 +341,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4UUEFBYP76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeSplit/resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -356,13 +369,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4UUEFBYP76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeSplit/resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -402,7 +414,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6EAC723927B91697001B6BF9 /* MyPackage */ = {
+		8AF2E79B28634D5C007FCBD2 /* MyPackage */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MyPackage;
 		};
