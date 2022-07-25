@@ -31,6 +31,12 @@ extension AppState {
     
 }
 
+extension AppState {
+    
+    static var currencyCode: String { Locale.current.currencyCode ?? "USD" }
+    
+}
+
 // MARK: - (persistence methods)
 fileprivate extension Array where Element == Entry {
     

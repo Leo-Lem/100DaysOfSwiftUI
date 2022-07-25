@@ -1,5 +1,5 @@
 //
-//  ContentView-Total.swift
+//  WeSplitForm-Total.swift
 //  WeSplit
 //
 //  Created by Leopold Lemmermann on 16.02.22.
@@ -18,11 +18,17 @@ extension WeSplitForm {
             HStack {
                 ForEach(columns, id: \.0) { column in
                     Menu {
-                        Text("\(column.amount.formatted(.currency(code: currencyCode))) altogether.", font: .headline)
+                        Text(
+                            "\(column.amount.formatted(.currency(code: AppState.currencyCode))) altogether.",
+                            font: .headline
+                        )
                     } label: {
                         VStack {
                             Text(column.title, font: .caption.bold(), color: .secondary)
-                            Text(column.amount / people, format: .currency(code: currencyCode), font: .headline)
+                            Text(
+                                column.amount / people, format: .currency(code: AppState.currencyCode),
+                                font: .headline
+                            )
                         }
                         .if(column.title.contains("Tip") && tip < 0.1) { $0.foregroundColor(.red) }
                         .if(column.title.contains("Tip") && tip > 0.2) { $0.foregroundColor(.blue) }
@@ -43,7 +49,6 @@ extension WeSplitForm {
                 ("Total/Person", amount * (1 + tip))
             ]
         }
-        private var currencyCode: String { Locale.current.currencyCode ?? "USD" }
     }
 }
 

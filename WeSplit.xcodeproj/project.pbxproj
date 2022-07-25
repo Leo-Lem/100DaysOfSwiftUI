@@ -10,10 +10,10 @@
 		6E6877A827B9142000098C43 /* WeSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6877A727B9142000098C43 /* WeSplitApp.swift */; };
 		6E6877AA27B9142000098C43 /* WeSplitForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6877A927B9142000098C43 /* WeSplitForm.swift */; };
 		6E6877AC27B9142100098C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E6877AB27B9142100098C43 /* Assets.xcassets */; };
-		6E91855127BD267000984385 /* ContentView-History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E91855027BD267000984385 /* ContentView-History.swift */; };
+		6E91855127BD267000984385 /* WeSplitForm-History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E91855027BD267000984385 /* WeSplitForm-History.swift */; };
 		6E91855527BD277D00984385 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E91855427BD277D00984385 /* Entry.swift */; };
 		6E91855727BD288100984385 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E91855627BD288100984385 /* AppState.swift */; };
-		6EDDF42927B93F7400778CF3 /* ContentView-Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDDF42827B93F7400778CF3 /* ContentView-Total.swift */; };
+		6EDDF42927B93F7400778CF3 /* WeSplitForm-Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDDF42827B93F7400778CF3 /* WeSplitForm-Total.swift */; };
 		6EFA50F4288E91B900CC89CC /* AppStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA50F3288E91B900CC89CC /* AppStateTests.swift */; };
 		6EFA5104288E97FC00CC89CC /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6EFA5103288E97FC00CC89CC /* .swiftlint.yml */; };
 		6EFA5105288E97FC00CC89CC /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6EFA5103288E97FC00CC89CC /* .swiftlint.yml */; };
@@ -21,6 +21,8 @@
 		6EFA510A288EB1A900CC89CC /* Entry-WIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA5109288EB1A900CC89CC /* Entry-WIP.swift */; };
 		6EFA510C288EB7EF00CC89CC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6EFA510B288EB7EF00CC89CC /* .gitignore */; };
 		6EFA510E288EB82400CC89CC /* WeSplit-Logo.svg in Resources */ = {isa = PBXBuildFile; fileRef = 6EFA510D288EB82400CC89CC /* WeSplit-Logo.svg */; };
+		6EFA5110288EB9CB00CC89CC /* WeSplitFormVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA510F288EB9CB00CC89CC /* WeSplitFormVM.swift */; };
+		6EFA5114288ECA8200CC89CC /* WeSplitFormVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA5113288ECA8200CC89CC /* WeSplitFormVMTests.swift */; };
 		8AF2E79C28634D5C007FCBD2 /* MyPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8AF2E79B28634D5C007FCBD2 /* MyPackage */; };
 /* End PBXBuildFile section */
 
@@ -40,10 +42,10 @@
 		6E6877A727B9142000098C43 /* WeSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitApp.swift; sourceTree = "<group>"; };
 		6E6877A927B9142000098C43 /* WeSplitForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitForm.swift; sourceTree = "<group>"; };
 		6E6877AB27B9142100098C43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6E91855027BD267000984385 /* ContentView-History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-History.swift"; sourceTree = "<group>"; };
+		6E91855027BD267000984385 /* WeSplitForm-History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeSplitForm-History.swift"; sourceTree = "<group>"; };
 		6E91855427BD277D00984385 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		6E91855627BD288100984385 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		6EDDF42827B93F7400778CF3 /* ContentView-Total.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-Total.swift"; sourceTree = "<group>"; };
+		6EDDF42827B93F7400778CF3 /* WeSplitForm-Total.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeSplitForm-Total.swift"; sourceTree = "<group>"; };
 		6EFA50F1288E91B900CC89CC /* WeSplitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeSplitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EFA50F3288E91B900CC89CC /* AppStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateTests.swift; sourceTree = "<group>"; };
 		6EFA5103288E97FC00CC89CC /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
@@ -51,6 +53,8 @@
 		6EFA5109288EB1A900CC89CC /* Entry-WIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry-WIP.swift"; sourceTree = "<group>"; };
 		6EFA510B288EB7EF00CC89CC /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		6EFA510D288EB82400CC89CC /* WeSplit-Logo.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "WeSplit-Logo.svg"; sourceTree = "<group>"; };
+		6EFA510F288EB9CB00CC89CC /* WeSplitFormVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitFormVM.swift; sourceTree = "<group>"; };
+		6EFA5113288ECA8200CC89CC /* WeSplitFormVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitFormVMTests.swift; sourceTree = "<group>"; };
 		8AF2E79A28634D44007FCBD2 /* mypkg */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = mypkg; path = ../../../mypkg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +80,8 @@
 		6E23F52B27C55C6200FF0DE8 /* blocks */ = {
 			isa = PBXGroup;
 			children = (
-				6EDDF42827B93F7400778CF3 /* ContentView-Total.swift */,
+				6E91855027BD267000984385 /* WeSplitForm-History.swift */,
+				6EDDF42827B93F7400778CF3 /* WeSplitForm-Total.swift */,
 			);
 			path = blocks;
 			sourceTree = "<group>";
@@ -105,22 +110,23 @@
 			isa = PBXGroup;
 			children = (
 				6E6877A727B9142000098C43 /* WeSplitApp.swift */,
-				6E91855227BD277000984385 /* model */,
-				6E91855327BD277400984385 /* controller */,
-				6E91854C27BD15D900984385 /* view */,
+				6E91855627BD288100984385 /* AppState.swift */,
+				6E91854C27BD15D900984385 /* form */,
 				6E91854D27BD15DF00984385 /* resources */,
 			);
 			path = WeSplit;
 			sourceTree = "<group>";
 		};
-		6E91854C27BD15D900984385 /* view */ = {
+		6E91854C27BD15D900984385 /* form */ = {
 			isa = PBXGroup;
 			children = (
+				6E91855427BD277D00984385 /* Entry.swift */,
+				6EFA5109288EB1A900CC89CC /* Entry-WIP.swift */,
 				6E6877A927B9142000098C43 /* WeSplitForm.swift */,
-				6E91855027BD267000984385 /* ContentView-History.swift */,
+				6EFA510F288EB9CB00CC89CC /* WeSplitFormVM.swift */,
 				6E23F52B27C55C6200FF0DE8 /* blocks */,
 			);
-			path = view;
+			path = form;
 			sourceTree = "<group>";
 		};
 		6E91854D27BD15DF00984385 /* resources */ = {
@@ -132,23 +138,6 @@
 				6EFA50FD288E96A500CC89CC /* config */,
 			);
 			path = resources;
-			sourceTree = "<group>";
-		};
-		6E91855227BD277000984385 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				6E91855427BD277D00984385 /* Entry.swift */,
-				6EFA5109288EB1A900CC89CC /* Entry-WIP.swift */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		6E91855327BD277400984385 /* controller */ = {
-			isa = PBXGroup;
-			children = (
-				6E91855627BD288100984385 /* AppState.swift */,
-			);
-			path = controller;
 			sourceTree = "<group>";
 		};
 		6EAC723627B91691001B6BF9 /* Packages */ = {
@@ -170,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				6EFA50F3288E91B900CC89CC /* AppStateTests.swift */,
+				6EFA5113288ECA8200CC89CC /* WeSplitFormVMTests.swift */,
 			);
 			path = WeSplitTests;
 			sourceTree = "<group>";
@@ -337,12 +327,13 @@
 			files = (
 				6E91855527BD277D00984385 /* Entry.swift in Sources */,
 				6EFA510A288EB1A900CC89CC /* Entry-WIP.swift in Sources */,
-				6EDDF42927B93F7400778CF3 /* ContentView-Total.swift in Sources */,
+				6EDDF42927B93F7400778CF3 /* WeSplitForm-Total.swift in Sources */,
 				6E91855727BD288100984385 /* AppState.swift in Sources */,
 				6E6877AA27B9142000098C43 /* WeSplitForm.swift in Sources */,
+				6EFA5110288EB9CB00CC89CC /* WeSplitFormVM.swift in Sources */,
 				6EFA5108288E9DC200CC89CC /* Entry-example.swift in Sources */,
 				6E6877A827B9142000098C43 /* WeSplitApp.swift in Sources */,
-				6E91855127BD267000984385 /* ContentView-History.swift in Sources */,
+				6E91855127BD267000984385 /* WeSplitForm-History.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EFA50F4288E91B900CC89CC /* AppStateTests.swift in Sources */,
+				6EFA5114288ECA8200CC89CC /* WeSplitFormVMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +483,7 @@
 				DEVELOPMENT_ASSET_PATHS = WeSplit/resources/previews;
 				DEVELOPMENT_TEAM = 4UUEFBYP76;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeSplit/resources/config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -520,6 +513,7 @@
 				DEVELOPMENT_ASSET_PATHS = WeSplit/resources/previews;
 				DEVELOPMENT_TEAM = 4UUEFBYP76;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeSplit/resources/config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct WeSplitApp: App {
+    
+    @StateObject private var state = AppState()
+    
     var body: some Scene {
         WindowGroup {
             WeSplitForm()
+                .environmentObject(state)
         }
     }
+    
 }

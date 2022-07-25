@@ -38,12 +38,12 @@ class AppStateTests: XCTestCase {
         
         // trying to save without a total
         state.addEntry(wip)
-        XCTAssertTrue(state.history.isEmpty, "Entry was not saved without a valid total value.")
+        XCTAssertTrue(state.history.isEmpty, "Entry was saved without a valid total value.\n\nEntry: \(wip)")
         
         // saving with a valid total
         wip = .random
         state.addEntry(wip)
-        XCTAssertEqual(state.history.first?.total, wip.total, "The total of the saved entry doesn't match.")
+        XCTAssertEqual(state.history.last?.total, wip.total, "The total of the saved entry doesn't match.")
     }
 
     func testPerformanceOfAddingEntries() {
@@ -59,7 +59,7 @@ class AppStateTests: XCTestCase {
 
 }
 
-// MARK: - (Helpers for testing)
+// MARK: - (Helpers)
 extension AppState {
     
     fileprivate func deleteHistory() { history = [] }
