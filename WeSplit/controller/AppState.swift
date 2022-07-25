@@ -21,14 +21,17 @@ class AppState: ObservableObject {
 
 extension AppState {
     
-    func saveEntry(total: Double, people: Int, tip: Double) {
-        history.append(Entry(total: total, people: people, tip: tip))
+    func addEntry(_ wip: Entry.WIP) {
+        if let entry = Entry(wip) {
+            history.append(entry)
+        } else {
+            print("Warning: Entry couldn't be saved, as there is no total available.")
+        }
     }
     
 }
 
-
-//MARK: - persistence methods
+// MARK: - (persistence methods)
 fileprivate extension Array where Element == Entry {
     
     private var file: URL { FileManager.documentsDirectory.appendingPathComponent("entries.json") }
@@ -37,7 +40,7 @@ fileprivate extension Array where Element == Entry {
         do {
             let data = try JSONEncoder().encode(self)
             try data.write(to: file)
-        } catch { print("saving entries failes: \(error)") }
+        } catch { print("saving entries failed: \(error)") }
     }
     
     mutating func load() {
@@ -45,7 +48,7 @@ fileprivate extension Array where Element == Entry {
             let data = try Data(contentsOf: file),
                 decoded: [Entry] = try JSONDecoder().decode(data)
             self = decoded
-        } catch { print("loading entries failes: \(error)") }
+        } catch { print("loading entries failed: \(error)") }
     }
     
 }

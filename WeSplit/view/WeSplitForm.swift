@@ -9,50 +9,48 @@ import SwiftUI
 import MySwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         Form {
             Section {
                 TextField(
                     "Amount",
-                    value: $total,
+                    value: $wip.total,
                     format: .currency(code: Locale.current.currencyCode ?? "USD"),
                     prompt: Text("$0.00")
                 )
                 .keyboardType(.decimalPad)
-                .focused($amountFocused)
+                .focused($isAmountFocused)
             }
             
             Section("How many people?") {
-                ExtendedSegmentedPicker($people, options: Array(2...50)) {
+                ExtendedSegmentedPicker($wip.people, options: Array(Entry.WIP.peopleLimits)) {
                     Text("\($0) people")
                 }
             }
             
             Section("How much do you want to tip?") {
-                ExtendedSegmentedPicker($tip, options: Array(stride(from: 0.0, through: 0.8, by: 0.05)), startAt: 2) {
+                let limits = Entry.WIP.tipLimits
+                
+                ExtendedSegmentedPicker(
+                    $wip.tip,
+                    options: Array(stride(from: limits.lowerBound, through: limits.upperBound, by: 0.05)),
+                    startAt: 2
+                ) {
                     Text($0, format: .percent)
                 }
             }
             
             Section {
-                Button {
-                    guard let total = total else { return }
-                    state.saveEntry(total: total, people: people, tip: tip)
-                    self.total = nil
-                    self.people = 2
-                    self.tip = 0.2
-                } label: {
+                Button(action: addEntryAndResetForm) {
                     Label("Pay", systemImage: "signature")
                 }
-                .disabled(total == nil)
+                .disabled(!wip.isTotalSet)
                 .frame(maxWidth: .infinity)
             }
         }
         .toolbar {
-            
-        }
-        .toolbar {
-            KeyboardDoneButton($amountFocused)
+            KeyboardDoneButton($isAmountFocused)
             
             ToolbarItem(placement: .automatic) {
                 NavigationLink {
@@ -63,7 +61,7 @@ struct ContentView: View {
             }
             
             ToolbarItem(placement: .bottomBar) {
-                if let total = total { Total(amount: total, people: people, tip: tip) }
+                if let entry = Entry(wip) { Total(entry: entry) }
             }
         }
         .group { $0
@@ -73,16 +71,29 @@ struct ContentView: View {
         }
     }
     
-    @State private var total: Double? = nil
-    @State private var people = 2
-    @State private var tip = 0.2
-    
-    @FocusState private var amountFocused: Bool
-    
+    @State private var wip = Entry.WIP()
     @StateObject private var state = AppState()
+    @FocusState private var isAmountFocused: Bool
+    
 }
 
-//MARK: - Previews
+extension ContentView {
+    
+    private func addEntryAndResetForm() {
+        guard wip.isTotalSet else { return }
+        state.addEntry(wip)
+        
+        resetForm()
+    }
+    
+    private func resetForm() {
+        isAmountFocused = false
+        wip = .init()
+    }
+    
+}
+
+// MARK: - (Previews)
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

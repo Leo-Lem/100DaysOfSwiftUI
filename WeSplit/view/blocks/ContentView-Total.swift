@@ -9,9 +9,10 @@ import SwiftUI
 import MySwiftUI
 import MyNumbers
 
-extension ContentView {
+extension WeSplitForm {
     struct Total: View {
-        let amount: Double, people: Int, tip: Double
+        
+        let entry: Entry
         
         var body: some View {
             HStack {
@@ -21,7 +22,7 @@ extension ContentView {
                     } label: {
                         VStack {
                             Text(column.title, font: .caption.bold(), color: .secondary)
-                            Text(column.perPerson, format: .currency(code: currencyCode), font: .headline)
+                            Text(column.amount / people, format: .currency(code: currencyCode), font: .headline)
                         }
                         .if(column.title.contains("Tip") && tip < 0.1) { $0.foregroundColor(.red) }
                         .if(column.title.contains("Tip") && tip > 0.2) { $0.foregroundColor(.blue) }
@@ -31,20 +32,24 @@ extension ContentView {
             }
         }
         
-        private var columns: [(title: String, amount: Double, perPerson: Double)] {
+        private var amount: Double { entry.total }
+        private var people: Int { entry.people }
+        private var tip: Double { entry.tip }
+        
+        private var columns: [(title: String, amount: Double)] {
             [
-                ("Amount/Person", amount, amount / people),
-                ("Tip/Person", amount * tip, amount * tip / people),
-                ("Total/Person", amount * (1 + tip), amount * (1 + tip) / people)
+                ("Amount/Person", amount),
+                ("Tip/Person", amount * tip),
+                ("Total/Person", amount * (1 + tip))
             ]
         }
         private var currencyCode: String { Locale.current.currencyCode ?? "USD" }
     }
 }
 
-//MARK: - Previews
+// MARK: - (Previews)
 struct TotalView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView.Total(amount: 10, people: 2, tip: 0.8)
+        WeSplitForm.Total(entry: .example)
     }
 }

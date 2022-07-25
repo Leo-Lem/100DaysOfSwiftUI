@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension ContentView {
+extension WeSplitForm {
     struct History: View {
         let entries: [Entry]
         
@@ -17,7 +17,7 @@ extension ContentView {
             List(entries.reversed()) { entry in
                 VStack(alignment: .leading) {
                     Text(entry.timestamp, format: .dateTime, font: .caption.bold())
-                    Total(amount: entry.total, people: entry.people, tip: entry.tip)
+                    Total(entry: entry)
                         .contextMenu { Text(entry.timestamp.formatted(date: .long, time: .shortened)) }
                 }
             }
@@ -26,16 +26,12 @@ extension ContentView {
 }
 
 #if DEBUG
-//MARK: - Previews
+// MARK: - (Previews)
 struct History_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView.History(entries: [.example, .example])
+        WeSplitForm.History(entries: [.example, .example])
     }
 }
 
-extension Entry {
-    static let example = Entry(total: 10, people: 6, tip: 0.4)
-}
-
-typealias Total = ContentView.Total
+typealias Total = WeSplitForm.Total
 #endif
