@@ -1,0 +1,162 @@
+[
+    {
+        "id": "grissom",
+        "name": "Virgil I. \"Gus\" Grissom",
+        "description": "Virgil Ivan \"Gus\" Grissom (3. April 1926 - 27. Januar 1967) war einer der sieben ursprünglichen Astronauten des Projekts Mercury der National Aeronautics and Space Administration und der erste der Mercury Seven, der starb. Er war auch ein Astronaut des Projekts Gemini und des Apollo-Programms. Grissom war der zweite Amerikaner, der ins All flog, und das erste Mitglied des NASA-Astronautenkorps, das zweimal ins All flog. Außerdem war Grissom ein Veteran des Zweiten Weltkriegs und des Koreakriegs, Testpilot der U.S. Air Force und ein Maschinenbauingenieur. Er war Träger des Distinguished Flying Cross und der Air Medal with an oak leaf cluster, zweifacher Träger der NASA Distinguished Service Medal und, posthum, der Congressional Space Medal of Honor."
+    },
+    {
+        "id": "white",
+        "name": "Edward H. White II",
+        "description": "Edward Higgins White II (14. November 1930 - 27. Januar 1967) (Oberstleutnant, USAF) war ein amerikanischer Luftfahrtingenieur, Offizier der US Air Force, Testpilot und NASA-Astronaut. Am 3. Juni 1965 war er der erste Amerikaner, der im Weltraum spazieren ging. White starb zusammen mit den Astronauten Virgil \"Gus\" Grissom und Roger B. Chaffee während der Tests vor dem Start der ersten Apollo-Mission mit Besatzung in Cape Canaveral.\n\n Er wurde für seinen Flug in Gemini 4 mit der NASA Distinguished Service Medal ausgezeichnet und erhielt dann posthum die Congressional Space Medal of Honor."
+    },
+    {
+        "id": "chaffee",
+        "name": "Roger B. Chaffee",
+        "description": "Roger Bruce Chaffee (15. Februar 1935 - 27. Januar 1967) war ein amerikanischer Marineoffizier und Flieger, Luftfahrtingenieur und NASA-Astronaut im Apollo-Programm. Chaffee wurde in Grand Rapids, Michigan, geboren, wo er ein Eagle Scout wurde. Er machte 1953 seinen Abschluss an der Central High School und nahm ein Stipendium des Naval Reserve Officers Training Corps (NROTC) an. Er begann seine College-Ausbildung am Illinois Institute of Technology, wo er in der Studentenverbindung Phi Kappa Sigma aktiv war. Er wechselte 1954 an die Purdue University, wo er sein Engagement bei Phi Kappa Sigma fortsetzte und seinen Privatpilotenschein erwarb."
+    },
+    {
+        "id": "schirra",
+        "name": "Walter M. Schirra",
+        "description": "Walter Marty Schirra Jr. (12. März 1923 - 3. Mai 2007) (Captain, USN, Ret.) war ein amerikanischer Marineflieger und NASA-Astronaut. Im Jahr 1959 wurde er einer der sieben Astronauten, die ursprünglich für das Projekt Mercury ausgewählt wurden, dem ersten Versuch der Vereinigten Staaten, Menschen ins All zu bringen. Am 3. Oktober 1962 flog er in einem Raumschiff, das er Sigma 7 nannte, die neunstündige Mercury-Atlas 8-Mission mit sechs Umläufen. Zum Zeitpunkt seiner Mission in Sigma 7 war Schirra der fünfte Amerikaner und der neunte Mensch, der ins All reiste. Im Rahmen des Zwei-Mann-Zwillingsprogramms gelang ihm das erste Rendezvous im Weltraum, als er sein Gemini 6A-Raumschiff im Dezember 1965 bis auf 30 cm an das Schwesterschiff Gemini 7 heranbrachte. Im Oktober 1968 kommandierte er Apollo 7, einen 11-tägigen Test des dreiköpfigen Apollo-Kommando-/Servicemoduls in einer niedrigen Erdumlaufbahn und den ersten bemannten Start für das Apollo-Programm."
+    },
+    {
+        "id": "eisele",
+        "name": "Donn F. Eisele",
+        "description": "Donn Fulton Eisele (23. Juni 1930 - 2. Dezember 1987) (Colonel, USAF) war ein Offizier der United States Air Force, Testpilot und später Astronaut der NASA. Er besetzte den Pilotensitz des Kommandomoduls während des Fluges von Apollo 7 im Jahr 1968.\n\nNach seinem Ausscheiden sowohl aus der NASA als auch aus der Air Force wurde er Leiter des Friedenskorps in Thailand, bevor er in die Privatwirtschaft wechselte."
+    },
+    {
+        "id": "cunningham",
+        "name": "R. Walter Cunningham",
+        "description": "Ronnie Walter Cunningham (geboren am 16. März 1932), (Col, USMCR, Ret.) ist ein pensionierter amerikanischer Astronaut. Im Jahr 1968 war er Pilot der Mondlandefähre bei der Apollo-7-Mission. Er war der dritte zivile Astronaut der NASA (nach Neil Armstrong und Elliot See) und war außerdem Kampfpilot, Physiker, Unternehmer, Risikokapitalgeber und Autor des Buches The All-American Boys."
+    },
+    {
+        "id": "borman",
+        "name": "Frank F. Borman II",
+        "description": "Frank Frederick Borman II (geboren am 14. März 1928) ist ein pensionierter Colonel der United States Air Force (USAF), Luftfahrtingenieur, Testpilot, Geschäftsmann, Rancher und NASA-Astronaut. Er war der Kommandant von Apollo 8, der ersten Mission, die um den Mond flog, und war zusammen mit den Besatzungsmitgliedern Jim Lovell und Bill Anders der erste von 24 Menschen, dem dies gelang, wofür er mit der Congressional Space Medal of Honor ausgezeichnet wurde. 2019 ist er der älteste lebende ehemalige amerikanische Astronaut, elf Tage älter als Lovell."
+    },
+    {
+        "id": "lovell",
+        "name": "James A. Lovell Jr.",
+        "description": "James Arthur Lovell Jr. (geboren am 25. März 1928) ist ein ehemaliger NASA-Astronaut, Marineflieger, Maschinenbauingenieur und Navy Captain im Ruhestand. Als Pilot des Kommandomoduls von Apollo 8 war er 1968 einer der ersten drei Menschen, die zum Mond flogen und ihn umkreisten. Anschließend leitete er 1970 die Apollo-13-Mondmission, die nach einem kritischen Fehler auf dem Weg zum Mond den Mond umkreiste und dank der Bemühungen der Besatzung und der Missionskontrolle sicher zur Erde zurückkehrte.\n\nLovell hatte zuvor an zwei Gemini-Missionen teilgenommen, Gemini 7 in 1965 und Gemini 12 in 1966. Er war der erste Mensch, der viermal ins All flog."
+    },
+    {
+        "id": "anders",
+        "name": "William A. Anders",
+        "description": "William Alison Anders (geboren am 17. Oktober 1933) ist ein pensionierter Generalmajor der US-Luftwaffe, ehemaliger Elektroingenieur, Kerntechniker, NASA-Astronaut und Geschäftsmann. Im Dezember 1968 war er als Besatzungsmitglied von Apollo 8 einer der ersten drei Menschen, die die niedrige Erdumlaufbahn verließen und zum Mond flogen. Zusammen mit seinen Astronauten-Kollegen Frank Borman und Jim Lovell umrundete Anders den Mond zehn Mal und sendete Live-Bilder und Kommentare zurück zur Erde. Während einer der Mondumrundungen fotografierte er das ikonische Bild \"Earthrise\"."
+    },
+    {
+        "id": "mcdivitt",
+        "name": "James A. McDivitt",
+        "description": "James Alton McDivitt (geboren am 10. Juni 1929), (Brigadier General, USAF, Ret.), ist ein amerikanischer ehemaliger Testpilot, Pilot der United States Air Force, Luftfahrtingenieur und NASA-Astronaut, der an den Gemini- und Apollo-Programmen teilnahm. Er leitete den Gemini-4-Flug, bei dem Ed White den ersten US-Weltraumspaziergang durchführte, und später den Apollo-9-Flug, bei dem die Mondlandefähre und die komplette Apollo-Flugausrüstung zum ersten Mal mit einer Besatzung getestet wurden. Später wurde er Manager der Mondlandeoperationen und war von 1969 bis 1972 der Apollo Spacecraft Program Manager."
+    },
+    {
+        "id": "scott",
+        "name": "David R. Scott",
+        "description": "David Randolph Scott (geboren am 6. Juni 1932) (Oberst, USAF, ausgeschieden) ist ein pensionierter Testpilot und NASA-Astronaut, der als siebter Mensch den Mond betrat. Als Kommandant von Apollo 15 wurde Scott 1963 als Teil der dritten Gruppe als Astronaut ausgewählt. Scott flog dreimal ins All und ist der einzige noch lebende Kommandant einer Apollo-Mission, die auf dem Mond landete, und einer von vier überlebenden Mondgängern. Bevor er Astronaut wurde, machte Scott seinen Abschluss an der Militärakademie der Vereinigten Staaten in West Point und trat in die Air Force ein. Nachdem er als Kampfpilot in Europa gedient hatte, absolvierte er die Air Force Experimental Test Pilot School und die Aerospace Research Pilot School. Scott schied 1975 mit dem Rang eines Obersts und mehr als 5.600 Flugstunden aus der Air Force aus."
+    },
+    {
+        "id": "schweickart",
+        "name": "Russell L. Schweickart",
+        "description": "Russell Louis \"Rusty\" Schweickart (geboren am 25. Oktober 1935) ist ein US-amerikanischer Luftfahrtingenieur und ehemaliger NASA-Astronaut, Forschungswissenschaftler, Kampfpilot der US Air Force sowie ehemaliger Geschäftsmann und leitender Regierungsbeamter. Schweickart wurde 1963 für die dritte Astronautengruppe der NASA ausgewählt. Er war Pilot der Mondlandefähre bei der Mission Apollo 9 im Jahr 1969, dem ersten Flugtest der Mondlandefähre mit Besatzung, bei dem er den ersten Test des tragbaren Lebenserhaltungssystems im Weltraum durchführte, das von den Apollo-Astronauten verwendet wurde, die den Mond betraten. Als Ersatzkommandant der ersten Skylab-Mission im Jahr 1973 war er für die Entwicklung der Hardware und der Verfahren verantwortlich, die von der ersten Besatzung verwendet wurden, um kritische Reparaturen an der Skylab-Station während des Flugs durchzuführen. Nach Skylab diente er eine Zeit lang als Direktor für Benutzerangelegenheiten im Office of Applications der NASA."
+    },
+    {
+        "id": "stafford",
+        "name": "Thomas P. Stafford",
+        "description": "Thomas Patten Stafford (geboren am 17. September 1930; Generalleutnant der USAF a.D.) ist ein ehemaliger amerikanischer Luftwaffenoffizier, Testpilot und NASA-Astronaut.\n\nNach seinem Abschluss an der United States Naval Academy trat Stafford in die United States Air Force ein und flog die F-86 Sabre, bevor er Testpilot wurde.\n\nEr wurde 1962 als Astronaut ausgewählt und flog an Bord von Gemini 6A und Gemini 9. Im Jahr 1969 war Stafford Kommandant von Apollo 10, der zweiten Mission mit Besatzung, die den Mond umkreiste, und der ersten, die eine Mondlandefähre in die Mondumlaufbahn brachte und auf eine Höhe von neun Meilen abstieg."
+    },
+    {
+        "id": "young",
+        "name": "John W. Young",
+        "description": "John Watts Young (24. September 1930 - 5. Januar 2018) war ein amerikanischer Astronaut, Marineoffizier und Flieger, Testpilot und Luftfahrtingenieur. Er war der neunte Mensch, der 1972 als Kommandant der Apollo-16-Mission den Mond betrat.\n\nYoung hatte die längste Karriere aller Astronauten und war der erste Mensch, der im Laufe von 42 Jahren aktiven NASA-Dienstes sechs Weltraummissionen flog. Er ist der einzige Mensch, der vier verschiedene Klassen von Raumfahrzeugen geflogen und befehligt hat: Gemini, das Apollo Command and Service Module, die Apollo Mondlandefähre und das Space Shuttle."
+    },
+    {
+        "id": "cernan",
+        "name": "Eugene A. Cernan",
+        "description": "Eugene Andrew Cernan (/ˈsɜːrnən/; 14. März 1934 - 16. Januar 2017) war ein US-amerikanischer Astronaut, Marineflieger, Elektroingenieur, Luftfahrttechniker und Kampfpilot. Während der Apollo-17-Mission war Cernan der elfte Mensch, der den Mond betrat. Da er nach Harrison Schmitt bei ihrem dritten und letzten Mondausflug wieder in die Apollo-Mondlandefähre stieg, war er der letzte Mensch, der den Mond betrat.\n\nCernan flog dreimal ins All: als Pilot von Gemini 9A im Juni 1966, als Pilot der Mondlandefähre von Apollo 10 im Mai 1969 und als Kommandant von Apollo 17 im Dezember 1972, der letzten Apollo-Mondlandung. Cernan war auch Ersatzmitglied der Raumfahrtmissionen Gemini 12, Apollo 7 und Apollo 14."
+    },
+    {
+        "id": "armstrong",
+        "name": "Neil A. Armstrong",
+        "description": "Neil Alden Armstrong (5. August 1930 - 25. August 2012) war ein amerikanischer Astronaut und Luftfahrtingenieur und der erste Mensch, der den Mond betrat. Er war außerdem Marineflieger, Testpilot und Universitätsprofessor.\n\nAls Absolvent der Purdue University studierte Armstrong Luftfahrttechnik; seine Studiengebühren wurden von der US-Marine im Rahmen des Holloway-Plans übernommen. Er wurde 1949 Fähnrich und im folgenden Jahr zum Marineflieger ernannt. Er nahm am Koreakrieg teil und flog die Grumman F9F Panther vom Flugzeugträger USS Essex aus. Im September 1951 wurde Armstrongs Flugzeug bei einem Tiefflug beschädigt, als es mit einem Flugabwehrkabel kollidierte, das einen großen Teil eines Flügels abtrennte. Armstrong musste aussteigen. Nach dem Krieg schloss er sein Studium an der Purdue University ab und wurde Testpilot bei der National Advisory Committee for Aeronautics (NACA) High-Speed Flight Station auf der Edwards Air Force Base in Kalifornien. Er war Projektpilot für Kampfflugzeuge der Century Series und flog sieben Mal die North American X-15. Außerdem nahm er an den Programmen \"Man in Space Soonest\" und \"X-20 Dyna-Soar\" der U.S. Air Force für die bemannte Raumfahrt teil."
+    },
+    {
+        "id": "collins",
+        "name": "Michael Collins",
+        "description": "Michael Collins (geboren am 31. Oktober 1930) ist ein ehemaliger amerikanischer Astronaut, Testpilot und Generalmajor der United States Air Force Reserves. Er wurde 1963 als Teil der dritten Gruppe von vierzehn Astronauten ausgewählt und flog zweimal ins All. Sein erster Weltraumflug war mit Gemini 10, bei dem er und Kommandopilot John Young ein orbitales Rendezvous mit zwei verschiedenen Raumschiffen durchführten und zwei Außenbordeinsätze (EVAs, auch bekannt als Weltraumspaziergänge) unternahmen. Sein zweiter Weltraumflug war als Kommandomodulpilot für Apollo 11. Während er in der Kommandokapsel in der Umlaufbahn um den Mond blieb, flogen Neil Armstrong und Buzz Aldrin in der Mondlandefähre ab, um die erste Landung mit Besatzung auf der Mondoberfläche durchzuführen.\n\nCollins ist einer von 24 Menschen, die zum Mond geflogen sind, den er dreißig Mal umkreiste. Er war der siebzehnte Amerikaner im Weltraum, der vierte Mensch (und dritte Amerikaner), der einen Weltraumspaziergang durchführte, der erste Mensch, der mehr als einen Weltraumspaziergang durchführte, und, nach Young, der das Kommandomodul auf Apollo 10 flog, der zweite Mensch, der den Mond allein umkreiste."
+    },
+    {
+        "id": "aldrin",
+        "name": "Edwin E. Aldrin Jr.",
+        "description": "Buzz Aldrin (geboren als Edwin Eugene Aldrin Jr.; 20. Januar 1930) ist ein amerikanischer Ingenieur und ehemaliger Astronaut und Kampfpilot. Als Pilot der Gemini-12-Mission von 1966 unternahm Aldrin drei Weltraumspaziergänge, und als Pilot der Apollo-Mondlandefähre bei der Apollo-11-Mission von 1969 waren er und der Kommandant der Mission, Neil Armstrong, die ersten beiden Menschen, die auf dem Mond landeten. Geboren in Glen Ridge, New Jersey, schloss Aldrin 1951 die Militärakademie der Vereinigten Staaten in West Point als Drittbester seines Jahrgangs mit einem Diplom in Maschinenbau ab. Er wurde in die United States Air Force aufgenommen und diente während des Koreakriegs als Düsenjägerpilot. Er flog 66 Kampfeinsätze und schoss zwei MiG-15-Flugzeuge ab."
+    },
+    {
+        "id": "conrad",
+        "name": "Charles Conrad, Jr.",
+        "description": "Charles \"Pete\" Conrad Jr. (2. Juni 1930 - 8. Juli 1999) (Captain, USN), war ein amerikanischer NASA-Astronaut, Luftfahrtingenieur, Marineoffizier und -flieger, Testpilot und betrat während der Apollo 12-Mission als dritter Mensch den Mond. Conrad wurde in der zweiten Astronautenklasse der NASA ausgewählt. Zusammen mit seinem Kommandopiloten Gordon Cooper stellte er bei seinem ersten Weltraumflug, der Gemini-5-Mission, einen achttägigen Weltraumausdauerrekord auf. Conrad leitete auch die Gemini 11-Mission. Während der Apollo 12-Mission betrat er als dritter Mensch den Mond. Nach Apollo leitete er Skylab 2, die erste Skylab-Mission mit Besatzung. Bei dieser Mission reparierten er und seine Kameraden erhebliche Startschäden an der Skylab-Raumstation. Dafür wurde er 1978 von Präsident Jimmy Carter mit der Congressional Space Medal of Honor ausgezeichnet."
+    },
+    {
+        "id": "gordon",
+        "name": "Richard F. Gordon, Jr.",
+        "description": "Richard Francis Gordon Jr. (5. Oktober 1929 - 6. November 2017) war ein amerikanischer Marineoffizier und Flieger, Chemiker, Testpilot und NASA-Astronaut sowie ein amerikanischer Fußballmanager. Er war einer von 24 Menschen, die zum Mond geflogen sind, und zwar als Kommandomodulpilot der Apollo-12-Mission von 1969, die den Mond 45 Mal umkreiste.\n\nVor seinem Mondflug war Gordon als Pilot der Gemini-11-Mission von 1966 im Weltraum geflogen."
+    },
+    {
+        "id": "bean",
+        "name": "Alan L. Bean",
+        "description": "Alan LaVern Bean (15. März 1932 - 26. Mai 2018) war ein amerikanischer Marineoffizier und Flieger, Luftfahrtingenieur, Testpilot und NASA-Astronaut; er war der vierte Mensch, der den Mond betrat. Er wurde 1963 von der NASA als Astronaut der Astronautengruppe 3 ausgewählt. Seinen ersten Flug ins All unternahm er im Alter von 37 Jahren im November 1969 an Bord von Apollo 12, der zweiten bemannten Mission, die auf dem Mond landete. Seinen zweiten und letzten Flug ins All unternahm er 1973 auf der Mission Skylab 3, der zweiten bemannten Mission zur Skylab-Raumstation.\n\nNach seinem Ausscheiden aus der US-Marine 1975 und der NASA 1981 widmete er sich der Malerei, indem er verschiedene weltraumbezogene Szenen darstellte und seine eigenen Erfahrungen im Weltraum sowie die seiner Kollegen aus dem Apollo-Programm dokumentierte. Er war das letzte lebende Besatzungsmitglied von Apollo 12."
+    },
+    {
+        "id": "swigert",
+        "name": "John L. Swigert, Jr.",
+        "description": "John Leonard Swigert Jr. (30. August 1931 - 27. Dezember 1982) war ein amerikanischer Testpilot, Maschinenbau- und Raumfahrtingenieur, Pilot der United States Air Force und Astronaut der NASA. Er war einer von vierundzwanzig Astronauten, die zum Mond geflogen sind. Bevor er 1966 zur NASA kam, war Swigert ein ziviler Testpilot und Kampfpilot in der Air National Guard. Nachdem er die NASA verlassen hatte, wurde er im neuen 6. Bezirk von Colorado in den Kongress gewählt, starb aber vor seiner Vereidigung."
+    },
+    {
+        "id": "haise",
+        "name": "Fred W. Haise, Jr.",
+        "description": "Fred Wallace Haise Jr. (geboren am 14. November 1933) ist ein US-amerikanischer ehemaliger NASA-Astronaut, Kampfpilot des U.S. Marine Corps und der U.S. Air Force sowie Testpilot. Er ist einer von nur 24 Menschen, die zum Mond geflogen sind, und zwar als Pilot der Mondlandefähre auf Apollo 13. Er sollte der sechste Mensch sein, der auf dem Mond landet und spazieren geht, aber die Apollo-13-Mission wurde vor der Mondlandung abgebrochen. Anschließend flog er 1977 die Anflug- und Landetests für das Space Shuttle und schied 1979 aus der NASA aus."
+    },
+    {
+        "id": "shepard",
+        "name": "Alan B. Shepard Jr.",
+        "description": "Konteradmiral Alan Bartlett Shepard Jr. (18. November 1923 - 21. Juli 1998) war ein amerikanischer Astronaut, Marineflieger, Testpilot und Geschäftsmann. Er war der erste Amerikaner, der 1961 ins All flog und 1971 den Mond betrat. Als Absolvent der United States Naval Academy in Annapolis war Shepard während des Zweiten Weltkriegs bei der Marine im Einsatz. 1946 wurde er zum Marineflieger und 1950 zum Testpiloten ernannt. 1959 wurde er als einer der ursprünglichen Mercury-Sieben-Astronauten der NASA ausgewählt, und im Mai 1961 unternahm er den ersten bemannten Flug des Mercury-Projekts, MR-3, in einem Raumschiff, das er Freedom 7 nannte. Sein Raumschiff erreichte den Weltraum, war aber nicht in der Lage, eine Umlaufbahn zu erreichen. Er war der zweite Mensch und der erste Amerikaner, der in den Weltraum flog, und der erste Raumfahrer, der die Ausrichtung seines Raumschiffs manuell steuerte. In der Endphase des Mercury-Projekts sollte Shepard die Mercury-Atlas 10 (MA-10) fliegen, die als dreitägige Mission geplant war. Er nannte das Mercury-Raumschiff 15B Freedom 7 II zu Ehren seines ersten Raumschiffs, aber die Mission wurde abgesagt."
+    },
+    {
+        "id": "roosa",
+        "name": "Stuart A. Roosa",
+        "description": "Stuart Allen \"Stu\" Roosa (16. August 1933 - 12. Dezember 1994), Oberst, USAF, war ein amerikanischer Luftfahrtingenieur, Pilot der United States Air Force, Testpilot und NASA-Astronaut, der als Kommandomodulpilot an der Apollo-14-Mission teilnahm. Die Mission dauerte vom 31. Januar bis zum 9. Februar 1971 und war die dritte Mission, bei der Astronauten (Alan Shepard und Edgar Mitchell) auf dem Mond landeten. Während Shepard und Mitchell zwei Tage auf der Mondoberfläche verbrachten, führte Roosa vom Orbit aus in der Kommandokapsel Kitty Hawk Experimente durch. Er war einer von 24 Männern, die zum Mond reisten, den er 34 Mal umkreiste."
+    },
+    {
+        "id": "mitchell",
+        "name": "Edgar D. Mitchell",
+        "description": "Edgar Dean \"Ed\" Mitchell (17. September 1930 - 4. Februar 2016) war ein US-amerikanischer Marineoffizier und Flieger, Testpilot, Luftfahrtingenieur, Ufologe und NASA-Astronaut. Als Pilot der Mondlandefähre von Apollo 14 verbrachte er neun Stunden auf der Mondoberfläche in der Region Fra Mauro Highlands und war damit der sechste Mensch, der den Mond betrat.\n\nDas Vermächtnis seiner wissenschaftlichen und parapsychologischen Arbeit nach der NASA wird durch das Institute of Noetic Sciences fortgeführt."
+    },
+    {
+        "id": "worden",
+        "name": "Alfred M. Worden",
+        "description": "Alfred Merrill \"Al\" Worden (geboren am 7. Februar 1932), (Col, USAF, Ret.), ist ein amerikanischer Astronaut und Ingenieur, der 1971 als Kommandomodul-Pilot an der Apollo-15-Mondmission teilnahm. Als einer von nur 24 Menschen, die zum Mond geflogen sind, umkreiste er ihn 74 Mal mit dem Kommandomodul Endeavour."
+    },
+    {
+        "id": "irwin",
+        "name": "James B. Irwin",
+        "description": "James Benson \"Jim\" Irwin (17. März 1930 - 8. August 1991) (Oberst, USAF) war ein amerikanischer Astronaut, Luftfahrtingenieur, Testpilot und Pilot der United States Air Force. Er diente als Pilot der Apollo-Mondlandefähre bei Apollo 15, der vierten bemannten Mondlandung. Er war der achte Mensch, der den Mond betrat und der erste und jüngste dieser Astronauten, der starb."
+    },
+    {
+        "id": "mattingly",
+        "name": "Thomas K. Mattingly II",
+        "description": "Thomas Kenneth Mattingly II (geboren am 17. März 1936), (RADM, USN, Ret.), besser bekannt als Ken Mattingly, ist ein ehemaliger amerikanischer Marineoffizier und Flieger, Luftfahrtingenieur, Testpilot, Konteradmiral der United States Navy und Astronaut, der an den Missionen Apollo 16, STS-4 und STS-51-C teilnahm. \n\nEr flog als Kommandomodul-Pilot für Apollo 16 und absolvierte 64 Mondumrundungen, was ihn zu einem von 24 Menschen macht, die zum Mond geflogen sind.\n\nMattingly und sein Kommandant von Apollo 16, John Young, sind die einzigen Personen, die zum Mond und auch zu einer Space-Shuttle-Orbitalmission geflogen sind (Fred Haise, sein ehemaliger Trainingskollege von Apollo 13, führte atmosphärische Flugtests des Space Shuttle durch \"Approach and Landing Tests\")."
+    },
+    {
+        "id": "duke",
+        "name": "Charles M. Duke Jr.",
+        "description": "Charles Moss Duke Jr. (geboren am 3. Oktober 1935) ist ein US-amerikanischer ehemaliger Astronaut, pensionierter Offizier der U.S. Air Force und Testpilot. Als Pilot der Mondlandefähre von Apollo 16 im Jahr 1972 war er der zehnte und jüngste Mensch, der den Mond betrat.\n\nDuke hat 4.147 Flugstunden absolviert, davon 3.632 Stunden in Düsenflugzeugen und 265 Stunden im Weltraum, plus 20 Stunden und 15 Minuten an Außenbordeinsätzen."
+    },
+    {
+        "id": "evans",
+        "name": "Ronald E. Evans",
+        "description": "Ronald Ellwin Evans Jr. (10. November 1933 - 7. April 1990), (Capt, USN), war ein amerikanischer Marineoffizier und Flieger, Elektroingenieur, Luftfahrtingenieur, NASA-Astronaut und einer von 24 Menschen, die zum Mond geflogen sind. \n\nEvans wurde 1966 von der NASA als Astronaut der Astronautengruppe 5 ausgewählt und unternahm seinen einzigen Flug ins All als Kommandomodul-Pilot an Bord von Apollo 17 im Dezember 1972, der letzten bemannten Mission zum Mond, zusammen mit Kommandant Eugene Cernan und Mondlandefähre-Pilot Harrison Schmitt.\n\nWährend des Fluges umkreisten er und fünf Mäuse den Mond rekordverdächtige 75 Mal, während seine beiden Mannschaftskameraden auf die Oberfläche hinabstiegen. Damit ist er der letzte Mensch, der den Mond allein umkreist hat, und hält mit 148 Stunden den Rekord für die längste Aufenthaltsdauer in der Mondumlaufbahn. 1975 diente Evans als Reserve-Kommandomodulpilot für die Apollo-Sojus-Testprojekt-Mission."
+    },
+    {
+        "id": "schmitt",
+        "name": "Harrison H. Schmitt",
+        "description": "Harrison Hagan \"Jack\" Schmitt (geboren am 3. Juli 1935) ist ein amerikanischer Geologe, pensionierter NASA-Astronaut, Universitätsprofessor, ehemaliger US-Senator aus New Mexico und als Besatzungsmitglied von Apollo 17 der letzte lebende Mensch, der den Mond betreten hat.\n\n Im Dezember 1972 wurde Schmitt als Mitglied der Besatzung von Apollo 17 das erste Mitglied der ersten Wissenschaftler-Astronauten-Gruppe der NASA, das ins All flog. Da Apollo 17 die letzte der Apollo-Missionen war, wurde er auch der zwölfte und zweitjüngste Mensch, der den Mond betrat, und der vorletzte Mensch, der den Mond verließ (er bestieg die Mondlandefähre kurz vor dem Kommandanten Eugene Cernan).\n\nSchmitt ist auch der einzige Wissenschaftler, der über die niedrige Erdumlaufbahn hinaus geflogen ist und den Mond besucht hat. Er war einflussreich in der Gemeinschaft der Geologen, die das Apollo-Programm unterstützten, und gehörte zu den Wissenschaftlern, die die Apollo-Astronauten ausbildeten, die für den Besuch der Mondoberfläche ausgewählt wurden, bevor er selbst mit den Vorbereitungen für eine Apollo-Mission begann."
+    }
+]

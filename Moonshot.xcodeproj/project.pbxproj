@@ -13,8 +13,6 @@
 		6E424F7D2889931000B142A6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E424F7C2889931000B142A6 /* AppState.swift */; };
 		6E5BC7AD26CD3F7D001B70A5 /* MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5BC7AC26CD3F7D001B70A5 /* MoonshotApp.swift */; };
 		6E5BC7B126CD3F7E001B70A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5BC7B026CD3F7E001B70A5 /* Assets.xcassets */; };
-		6E5BC7BC26CEB6D5001B70A5 /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E5BC7BB26CEB6D5001B70A5 /* astronauts.json */; };
-		6E5BC7BE26CEB6DC001B70A5 /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E5BC7BD26CEB6DC001B70A5 /* missions.json */; };
 		6E5BC7C126CEB721001B70A5 /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5BC7C026CEB721001B70A5 /* Astronaut.swift */; };
 		6E5BC7C526CEBA0D001B70A5 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5BC7C426CEBA0D001B70A5 /* Mission.swift */; };
 		6E5BC7C826D01AFE001B70A5 /* MissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5BC7C726D01AFE001B70A5 /* MissionsView.swift */; };
@@ -22,7 +20,6 @@
 		6E9EAA84288AC714007CAEF2 /* AstronautVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EAA83288AC714007CAEF2 /* AstronautVM.swift */; };
 		6E9EAA89288AC7BC007CAEF2 /* Astronaut-example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EAA88288AC7BC007CAEF2 /* Astronaut-example.swift */; };
 		6E9EAA8B288AC7CF007CAEF2 /* Mission-example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EAA8A288AC7CF007CAEF2 /* Mission-example.swift */; };
-		6E9EAA93288AD3FB007CAEF2 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6E9EAA92288AD3FB007CAEF2 /* .swiftlint.yml */; };
 		6E9EAA97288B18AF007CAEF2 /* CrewMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EAA96288B18AF007CAEF2 /* CrewMember.swift */; };
 		6E9EAA99288B1FF7007CAEF2 /* Mission-format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EAA98288B1FF7007CAEF2 /* Mission-format.swift */; };
 		6E9EAA9D288B21B3007CAEF2 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EAA9C288B21B3007CAEF2 /* MissionView.swift */; };
@@ -31,6 +28,10 @@
 		6E9EAAA5288B2AA6007CAEF2 /* CrewMember-Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EAAA4288B2AA6007CAEF2 /* CrewMember-Role.swift */; };
 		6E9EAAA9288B302E007CAEF2 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EAAA8288B302E007CAEF2 /* Strings.swift */; };
 		6E9EAAAC288B318B007CAEF2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E9EAAAE288B318B007CAEF2 /* Localizable.strings */; };
+		6EFA5115288ECFB200CC89CC /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 6EFA5117288ECFB200CC89CC /* missions.json */; };
+		6EFA5119288ED08900CC89CC /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 6EFA511B288ED08900CC89CC /* astronauts.json */; };
+		6EFA511E288ED4CD00CC89CC /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6EFA511D288ED4CD00CC89CC /* .swiftlint.yml */; };
+		6EFA5120288ED4F000CC89CC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6EFA511F288ED4F000CC89CC /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +42,6 @@
 		6E5BC7A926CD3F7D001B70A5 /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5BC7AC26CD3F7D001B70A5 /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		6E5BC7B026CD3F7E001B70A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6E5BC7BB26CEB6D5001B70A5 /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
-		6E5BC7BD26CEB6DC001B70A5 /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
 		6E5BC7C026CEB721001B70A5 /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
 		6E5BC7C426CEBA0D001B70A5 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		6E5BC7C726D01AFE001B70A5 /* MissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsView.swift; sourceTree = "<group>"; };
@@ -50,7 +49,6 @@
 		6E9EAA83288AC714007CAEF2 /* AstronautVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautVM.swift; sourceTree = "<group>"; };
 		6E9EAA88288AC7BC007CAEF2 /* Astronaut-example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Astronaut-example.swift"; sourceTree = "<group>"; };
 		6E9EAA8A288AC7CF007CAEF2 /* Mission-example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mission-example.swift"; sourceTree = "<group>"; };
-		6E9EAA92288AD3FB007CAEF2 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; name = .swiftlint.yml; path = Moonshot/.swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		6E9EAA94288AD5C8007CAEF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E9EAA96288B18AF007CAEF2 /* CrewMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewMember.swift; sourceTree = "<group>"; };
 		6E9EAA98288B1FF7007CAEF2 /* Mission-format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mission-format.swift"; sourceTree = "<group>"; };
@@ -61,6 +59,12 @@
 		6E9EAAA8288B302E007CAEF2 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		6E9EAAAD288B318B007CAEF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6E9EAAAF288B31A2007CAEF2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6EFA5116288ECFB200CC89CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/missions.json; sourceTree = "<group>"; };
+		6EFA5118288ECFB600CC89CC /* de */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = de; path = de.lproj/missions.json; sourceTree = "<group>"; };
+		6EFA511A288ED08900CC89CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/astronauts.json; sourceTree = "<group>"; };
+		6EFA511C288ED08B00CC89CC /* de */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = de; path = de.lproj/astronauts.json; sourceTree = "<group>"; };
+		6EFA511D288ED4CD00CC89CC /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
+		6EFA511F288ED4F000CC89CC /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +106,8 @@
 				6E5BC7B026CD3F7E001B70A5 /* Assets.xcassets */,
 				6E424F7128898FAF00B142A6 /* Astronauts.xcassets */,
 				6E424F6F28898F9B00B142A6 /* Missions.xcassets */,
-				6E5BC7BD26CEB6DC001B70A5 /* missions.json */,
-				6E5BC7BB26CEB6D5001B70A5 /* astronauts.json */,
+				6EFA5117288ECFB200CC89CC /* missions.json */,
+				6EFA511B288ED08900CC89CC /* astronauts.json */,
 			);
 			path = assets;
 			sourceTree = "<group>";
@@ -175,7 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				6E9EAA94288AD5C8007CAEF2 /* Info.plist */,
-				6E9EAA92288AD3FB007CAEF2 /* .swiftlint.yml */,
+				6EFA511D288ED4CD00CC89CC /* .swiftlint.yml */,
+				6EFA511F288ED4F000CC89CC /* .gitignore */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -247,7 +252,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 				de,
 			);
 			mainGroup = 6E5BC7A026CD3F7D001B70A5;
@@ -265,11 +269,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E5BC7BC26CEB6D5001B70A5 /* astronauts.json in Resources */,
-				6E5BC7BE26CEB6DC001B70A5 /* missions.json in Resources */,
+				6EFA5120288ED4F000CC89CC /* .gitignore in Resources */,
+				6EFA5119288ED08900CC89CC /* astronauts.json in Resources */,
+				6EFA5115288ECFB200CC89CC /* missions.json in Resources */,
 				6E424F7028898F9B00B142A6 /* Missions.xcassets in Resources */,
+				6EFA511E288ED4CD00CC89CC /* .swiftlint.yml in Resources */,
 				6E9EAAAC288B318B007CAEF2 /* Localizable.strings in Resources */,
-				6E9EAA93288AD3FB007CAEF2 /* .swiftlint.yml in Resources */,
 				6E5BC7B126CD3F7E001B70A5 /* Assets.xcassets in Resources */,
 				6E424F7228898FAF00B142A6 /* Astronauts.xcassets in Resources */,
 			);
@@ -293,7 +298,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"Warning: SwiftLint not installed (download from https://github.com/realm/SwiftLint)\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -331,6 +336,24 @@
 				6E9EAAAF288B31A2007CAEF2 /* de */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		6EFA5117288ECFB200CC89CC /* missions.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EFA5116288ECFB200CC89CC /* en */,
+				6EFA5118288ECFB600CC89CC /* de */,
+			);
+			name = missions.json;
+			sourceTree = "<group>";
+		};
+		6EFA511B288ED08900CC89CC /* astronauts.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EFA511A288ED08900CC89CC /* en */,
+				6EFA511C288ED08B00CC89CC /* de */,
+			);
+			name = astronauts.json;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
