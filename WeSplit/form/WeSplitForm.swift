@@ -68,7 +68,7 @@ struct WeSplitForm: View {
                 }
                 
                 ToolbarItem(placement: .bottomBar) {
-                    if let entry = Entry(vm.wip) { Total(entry: entry) }
+                    if let entry = try? Entry(vm.wip) { Total(entry: entry) }
                 }
             }
             .group { $0

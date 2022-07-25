@@ -28,14 +28,18 @@ struct Entry: Identifiable, Codable {
 
 extension Entry {
     
-    init?(_ wip: Entry.WIP) {
-        guard let wipTotal = wip.total else { return nil }
+    init(_ wip: Entry.WIP) throws {
+        guard let wipTotal = wip.total else { throw ValidationError.noTotal }
         
         id = UUID()
         timestamp = .now
         total = wipTotal
         people = wip.people
         tip = wip.tip
+    }
+    
+    enum ValidationError: Error {
+        case noTotal
     }
     
 }
