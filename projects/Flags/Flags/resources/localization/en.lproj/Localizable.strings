@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  Flags
+
+  Created by Leopold Lemmermann on 15.02.22.
+  
+*/
+"title-label" = "Flags";
+"history-label" = "Games";
+"settings-label" = "Settings";
+    
+"tapFlag-label" = "Tap the flag of";
+"score-label %@" = "%@";
+"roundsCount-label %lld" = "Number of rounds (%lld)";
+"flagsCount-label %lld" = "Number of flags (%lld)";
+    
+"ok-button" = "OK";
+"newGame-button" = "Start New Game";
+"saveAndNewGame-button" = "Start New Game with these Settings";
+    
+"game-alert-title" = "Game!";
+"game-alert-message %@" = "You scored %@!";
+"answer-alert-title-correct" = "That's correct!";
+"answer-alert-title-wrong" = "That wrong...";
+"answer-alert-message-correct %@" = "You scored %@ this round!";
+"answer-alert-message-wrong %@" = "It's the flag of %@.";
