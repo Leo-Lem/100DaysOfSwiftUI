@@ -1,0 +1,229 @@
+[
+	{
+		"id": 1,
+		"crew": [
+            {
+                "name": "grissom",
+                "role": "Command Pilot"
+            },
+            {
+                "name": "white",
+                "role": "Senior Pilot"
+            },
+            {
+                "name": "chaffee",
+                "role": "Pilot"
+            }
+		],
+		"description": "Apollo 1, ursprünglich als AS-204 bezeichnet, war die erste bemannte Mission des Apollo-Programms der Vereinigten Staaten, des Projekts, die ersten Menschen auf dem Mond zu landen.\n\nDie Mission war als erster erdnaher Orbitalversuch des Apollo-Kommando- und Servicemoduls geplant und sollte am 21. Februar 1967 gestartet werden, kam aber nie zustande. \"Gus\" Grissom, Senior Pilot Ed White und Pilot Roger B. Chaffee - und zerstörte das Kommandomodul (CM).\n\nDer von der Besatzung gewählte Name Apollo 1 wurde nach dem Brand von der NASA zu ihren Ehren offiziell gemacht."
+	},
+	{
+		"id": 7,
+        "launchDate": "1968-10-11",
+		"crew": [
+            {
+                "name": "schirra",
+                "role": "Commander"
+            },
+            {
+                "name": "eisele",
+                "role": "Command Module Pilot"
+            },
+            {
+                "name": "cunningham",
+                "role": "Lunar Module Pilot"
+            }
+		],
+		"description": "Apollo 7 war eine im Oktober 1968 von den Vereinigten Staaten durchgeführte bemannte Raumfahrtmission. Es war die erste Mission im Rahmen des Apollo-Programms der Vereinigten Staaten, die eine Besatzung ins All brachte. Es war auch der erste US-Raumflug mit Astronauten an Bord seit dem Flug von Gemini XII im November 1966. Die Mission AS-204, auch bekannt als \"Apollo 1\", sollte der erste bemannte Flug im Rahmen des Apollo-Programms sein. Der Start war für Februar 1967 geplant, doch bei einem Brand in der Kabine während eines Tests im Januar 1967 kam die Besatzung ums Leben.\n\nDie bemannten Flüge wurden daraufhin 21 Monate lang ausgesetzt, während die Ursache des Unfalls untersucht und Verbesserungen am Raumfahrzeug und den Sicherheitsverfahren vorgenommen wurden. Apollo 7 erfüllte die Aufgabe von Apollo 1, das Apollo-Kommando- und Servicemodul (CSM) in einer niedrigen Erdumlaufbahn zu testen."
+	},
+	{
+		"id": 8,
+        "launchDate": "1968-12-21",
+		"crew": [
+            {
+                "name": "borman",
+                "role": "Commander"
+            },
+            {
+                "name": "lovell",
+                "role": "Command Module Pilot"
+            },
+            {
+                "name": "anders",
+                "role": "Lunar Module Pilot"
+            }
+		],
+		"description": "Apollo 8 war die zweite bemannte Raumfahrtmission im Rahmen des Apollo-Raumfahrtprogramms der Vereinigten Staaten, die erste war Apollo 7, die in der Erdumlaufbahn blieb. Apollo 8 wurde am 21. Dezember 1968 gestartet und war das erste bemannte Raumschiff, das die niedrige Erdumlaufbahn verließ, den Mond erreichte, ihn umkreiste und zurückkehrte. Die drei Astronauten - Frank Borman, James Lovell und William Anders - waren die ersten Menschen, die zum Mond flogen, einen Erdaufgang erlebten und fotografierten und der Schwerkraft eines Himmelskörpers entkamen.\n\nApollo 8 war der dritte Flug und der erste Start mit Besatzung der Saturn-V-Rakete und war der erste bemannte Raumflug vom Kennedy Space Center, das sich neben der Cape Canaveral Air Force Station in Florida befindet."
+	},
+	{
+		"id": 9,
+        "launchDate": "1969-03-03",
+		"crew": [
+            {
+                "name": "mcdivitt",
+                "role": "Commander"
+            },
+            {
+                "name": "scott",
+                "role": "Command Module Pilot"
+            },
+            {
+                "name": "schweickart",
+                "role": "Lunar Module Pilot"
+            }
+		],
+		"description": "Apollo 9 war ein bemannter Raumflug im März 1969, der dritte Flug im Rahmen des Apollo-Programms der NASA. Der Flug in eine niedrige Erdumlaufbahn war die zweite Apollo-Mission mit Besatzung, die mit einer Saturn-V-Rakete gestartet wurde, und der erste Flug des kompletten Apollo-Raumschiffs: das Kommando- und Servicemodul (CSM) mit der Mondlandefähre (LM).\n\nDie Mission sollte das LM für den Betrieb in der Mondumlaufbahn qualifizieren, indem es seine Abstiegs- und Aufstiegsantriebssysteme demonstrierte und zeigte, dass seine Besatzung es unabhängig fliegen und dann wieder an das CSM andocken konnte, wie es für die erste bemannte Mondlandung erforderlich gewesen wäre.\n\nZu den weiteren Zielen des Fluges gehörten die Zündung des Abstiegsmotors des LM, um den Stapel des Raumfahrzeugs als Backup-Modus anzutreiben (wie es bei der Apollo-13-Mission erforderlich sein würde), und die Verwendung des Rucksacks des tragbaren Lebenserhaltungssystems außerhalb der LM-Kabine."
+	},
+	{
+		"id": 10,
+        "launchDate": "1969-05-18",
+		"crew": [
+            {
+                "name": "stafford",
+                "role": "Commander"
+            },
+            {
+                "name": "young",
+                "role": "Command Module Pilot"
+            },
+            {
+                "name": "cernan",
+                "role": "Lunar Module Pilot"
+            }
+		],
+		"description": "Apollo 10 war ein bemannter Raumflug im Mai 1969, die vierte bemannte Mission im Rahmen des Apollo-Programms der Vereinigten Staaten und die zweite (nach Apollo 8), die den Mond umkreiste. Es handelte sich um die F-Mission: eine \"Generalprobe\" für die erste Mondlandung, bei der alle Komponenten und Verfahren kurz vor der eigentlichen Landung getestet wurden. Die Apollo-Mondlandefähre (LM) wurde auf eine Abstiegsumlaufbahn in einer Entfernung von 8,4 Seemeilen (15,6 km) von der Mondoberfläche geflogen, an dem Punkt, an dem normalerweise der motorisierte Abstieg für die Landung beginnen würde.\n\n Nach 31 Umkreisungen des Mondes kehrte Apollo 10 sicher zur Erde zurück, und ihr Erfolg ermöglichte den ersten Landeversuch bei der Mission Apollo 11 zwei Monate später."
+	},
+	{
+		"id": 11,
+        "launchDate": "1969-07-16",
+		"crew": [
+            {
+                "name": "armstrong",
+                "role": "Commander"
+            },
+            {
+                "name": "collins",
+                "role": "Command Module Pilot"
+            },
+            {
+                "name": "aldrin",
+                "role": "Lunar Module Pilot"
+            }
+		],
+		"description": "Apollo 11 war der erste Raumflug, bei dem Menschen auf dem Mond landeten. Kommandant Neil Armstrong und Mondlandefähre-Pilot Buzz Aldrin bildeten die amerikanische Besatzung, die die Apollo-Mondlandefähre Eagle am 20. Juli 1969 um 20.17 Uhr UTC landete. Armstrong betrat sechs Stunden und 39 Minuten später, am 21. Juli um 02.56 Uhr UTC, als erster Mensch die Mondoberfläche; Aldrin folgte ihm 19 Minuten später. Sie verbrachten etwa zweieinviertel Stunden zusammen außerhalb des Raumschiffs und sammelten 47,5 Pfund (21,5 kg) Mondmaterial, das sie zur Erde zurückbrachten.\n\nDer Pilot des Kommandomoduls, Michael Collins, flog das Kommandomodul Columbia allein in der Mondumlaufbahn, während sie auf der Mondoberfläche waren. Armstrong und Aldrin verbrachten 21 Stunden und 31 Minuten auf der Mondoberfläche an einem Ort, den sie Tranquility Base nannten, bevor sie abhoben, um sich wieder der Columbia in der Mondumlaufbahn anzuschließen."
+	},
+	{
+		"id": 12,
+        "launchDate": "1969-11-14",
+		"crew": [
+            {
+                "name": "conrad",
+                "role": "Commander"
+            },
+            {
+                "name": "gordon",
+                "role": "Command Module Pilot"
+            },
+            {
+                "name": "bean",
+                "role": "Lunar Module Pilot"
+            }
+		],
+		"description": "Apollo 12 war der sechste Flug mit Besatzung im Rahmen des Apollo-Programms der Vereinigten Staaten und der zweite, der auf dem Mond landete. Er wurde am 14. November 1969 vom Kennedy Space Center in Florida gestartet, vier Monate nach Apollo 11. Commander Charles \"Pete\" Conrad und Mondlandefähre-Pilot Alan L. Bean waren etwas mehr als einen Tag und sieben Stunden auf der Mondoberfläche aktiv, während Kommandomodul-Pilot Richard F. Gordon in der Mondumlaufbahn blieb. Der Landeplatz für die Mission befand sich im südöstlichen Teil des Ozeans der Stürme."
+	},
+	{
+		"id": 13,
+        "launchDate": "1970-04-11",
+		"crew": [
+            {
+                "name": "lovell",
+                "role": "Commander"
+            },
+            {
+                "name": "swigert",
+                "role": "Command module pilot"
+            },
+            {
+                "name": "haise",
+                "role": "Lunar module pilot"
+            }
+		],
+		"description": "Apollo 13 war die siebte bemannte Mission im Rahmen des Apollo-Raumfahrtprogramms und die dritte, die auf dem Mond landen sollte. Das Raumschiff startete am 11. April 1970 vom Kennedy Space Center (KSC), aber die Mondlandung wurde abgebrochen, nachdem ein Sauerstofftank im Servicemodul (SM) zwei Tage nach Beginn der Mission versagte. Die Besatzung umrundete stattdessen den Mond und kehrte am 17. April 1970 sicher zur Erde zurück. Die Mission wurde von Jim Lovell mit Jack Swigert als Pilot des Kommandomoduls (CMP) und Fred Haise als Pilot der Mondlandefähre (LMP) geleitet. Swigert war ein später Ersatz für den ursprünglichen CMP Ken Mattingly, der nach einer Rötelnerkrankung am Boden blieb."
+	},
+	{
+		"id": 14,
+        "launchDate": "1971-01-31",
+		"crew": [
+            {
+                "name": "shepard",
+                "role": "Commander"
+            },
+            {
+                "name": "roosa",
+                "role": "Command Module Pilot"
+            },
+            {
+                "name": "mitchell",
+                "role": "Lunar Module Pilot"
+            }
+		],
+		"description": "Apollo 14 war die achte bemannte Mission im Rahmen des Apollo-Programms der Vereinigten Staaten, die dritte Landung auf dem Mond und die erste Landung im Mondhochland. Es war die letzte der \"H-Missionen\", die auf eine Landung mit zweitägigem Aufenthalt auf dem Mond und zwei Mondspaziergängen abzielte. Kommandant Alan Shepard, Kommandomodul-Pilot Stuart Roosa und Mondlandefähre-Pilot Edgar Mitchell starteten zu ihrer neuntägigen Mission am Sonntag, dem 31. Januar 1971, um 4:03:02 p. EST. Der Start verzögerte sich um vierzig Minuten und zwei Sekunden aufgrund von Wettereinschränkungen am Startplatz - die erste derartige Verzögerung im Apollo-Programm."
+	},
+	{
+		"id": 15,
+        "launchDate": "1971-07-26",
+		"crew": [
+            {
+                "name": "scott",
+                "role": "Commander"
+            },
+            {
+                "name": "worden",
+                "role": "Command module pilot"
+            },
+            {
+                "name": "irwin",
+                "role": "Lunar module pilot"
+            }
+		],
+		"description": "Apollo 15 war die neunte bemannte Mission im Rahmen des Apollo-Programms der Vereinigten Staaten und die vierte, die auf dem Mond landete. Es war die erste J-Mission, mit einem längeren Aufenthalt auf dem Mond und einer stärkeren Konzentration auf die Wissenschaft als bei früheren Landungen. Bei Apollo 15 wurde zum ersten Mal das Lunar Roving Vehicle eingesetzt.\n\nDie Mission begann am 26. Juli 1971 und endete am 7. August, wobei die Erkundung der Mondoberfläche zwischen dem 30. Juli und dem 2. August stattfand.\n\n Kommandant David Scott und Mondlandefähre-Pilot James Irwin landeten in der Nähe von Hadley Rille und erkundeten die Umgebung mit dem Rover, der es ihnen ermöglichte, sich weiter von der Mondlandefähre zu entfernen, als dies bei früheren Missionen möglich gewesen war. Sie verbrachten 181⁄2 Stunden auf der Mondoberfläche und sammelten 77 kg (170 Pfund) Oberflächenmaterial."
+	},
+	{
+		"id": 16,
+        "launchDate": "1972-04-16",
+		"crew": [
+            {
+                "name": "young",
+                "role": "Commander"
+            },
+            {
+                "name": "mattingly",
+                "role": "Command Module Pilot"
+            },
+            {
+                "name": "duke",
+                "role": "Lunar Module Pilot"
+            }
+		],
+		"description": "Apollo 16 war die zehnte bemannte Mission des Apollo-Raumfahrtprogramms der Vereinigten Staaten, die fünfte und vorletzte, die auf dem Mond landete, und die zweite, die im Mondhochland landete. Die zweite der so genannten \"J-Missionen\" bestand aus Kommandant John Young, Mondlandefährenpilot Charles Duke und Kommandomodulpilot Ken Mattingly. Die Mission wurde am 16. April 1972 um 12:54 Uhr EST vom Kennedy Space Center in Florida gestartet, dauerte 11 Tage, 1 Stunde und 51 Minuten und endete am 27. April um 14:45 Uhr EST."
+	},
+	{
+		"id": 17,
+        "launchDate": "1972-12-07",
+		"crew": [
+            {
+                "name": "cernan",
+                "role": "Commander"
+            },
+            {
+                "name": "evans",
+                "role": "Command Module Pilot"
+            },
+            {
+                "name": "schmitt",
+                "role": "Lunar Module Pilot"
+            }
+		],
+		"description": "Apollo 17 (7.-19. Dezember 1972) war die letzte Mission des Apollo-Programms der NASA; es ist das letzte Mal, dass Menschen außerhalb der niedrigen Erdumlaufbahn unterwegs waren. Die Besatzung bestand aus Kommandant Eugene Cernan, Mondlandefähre-Pilot Harrison Schmitt und Kommandomodul-Pilot Ronald Evans. An Bord befand sich ein biologisches Experiment mit fünf Mäusen. Apollo 17 wurde am 7. Dezember 1972 um 12:33 Uhr Eastern Standard Time (EST) gestartet und war eine \"J-Mission\", die drei Tage auf der Mondoberfläche, erweiterte wissenschaftliche Fähigkeiten und den Einsatz des dritten Lunar Roving Vehicle (LRV) umfasste."
+	}
+]
